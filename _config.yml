@@ -75,7 +75,6 @@ deploy:
   # message: [message]
 
 disqus_shortname: forsigner
-baidu_analytics: 57e94d016e201fba3603a8a2b0263af0
 
 tag_generator:
   per_page: 10
