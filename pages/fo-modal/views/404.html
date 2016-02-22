@@ -1,0 +1,47 @@
+<!-- @description 404 Not Found -->
+
+<!-- header start -->
+<header class="header" id="header">
+  <div class="header-title" title>
+    <span>404 Not Found</span>
+  </div>
+  <div class="menu menu-left" hm-tap="toggleMenuLeft()" id="menu-left">
+    <i class="icon-list"></i>
+  </div>
+  <div class="menu menu-right" id="menu-right" menuright>
+    <i class="icon-user"></i>
+  </div>
+  <img alt="正在加载" class="loading-small" loading src="img/loading-small.gif"/>
+</header>
+
+<div class="more hide animated" id="more">
+  <div class="arrow-box">
+    <ul>
+
+      <li closeright>
+        <a class="menu-right-item" hm-tap="go('/user/{{uid}}', 'fade')">
+          <i class="icon-info"></i>账户信息
+        </a>
+      </li>
+      <li closeright>
+        <a class="menu-right-item" hm-tap="go('/draw', 'fade')">
+          <i class="icon-money"></i>申请提款
+        </a>
+      </li>
+      <li closeright>
+        <a class="menu-right-item" hm-tap="go('/message', 'fade')">
+          <i class="icon-volume"></i>我的消息
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</div>
+<!-- header end -->
+
+<div class="content content-404" id="content">
+  <div class="inner-404">
+    <p>oh~ 您访问的页面找不到鸟...</p>
+    <a class="btn-404" href="#/">返回主页</a>
+  </div>
+</div>

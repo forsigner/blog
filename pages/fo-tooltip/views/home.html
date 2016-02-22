@@ -1,0 +1,102 @@
+<div class="content">
+  <div class="description">
+    <h1>fo-tooltip</h1>
+    <span>A nice Tooltip for Angular</span>
+  </div>
+
+  <div class="tooltip-demo" fo-tooltip ng-show="!type" tooltip-position="top left" tooltip-template-url="tooltip-top-left.html">
+    Top Left
+  </div>
+  <script id="tooltip-top-left.html" type="text/ng-template">
+    Top Left
+  </script>
+
+  <div class="tooltip-demo" fo-tooltip ng-show="type==='top center'" tooltip-position="top center" tooltip-template-url="tooltip-top-center.html">
+    Top Center
+  </div>
+  <script id="tooltip-top-center.html" type="text/ng-template">
+    Top Center
+  </script>
+
+  <div class="tooltip-demo" fo-tooltip ng-show="type==='top right'" tooltip-position="top right" tooltip-template-url="tooltip-top-right.html">
+    Top Right
+  </div>
+  <script id="tooltip-top-right.html" type="text/ng-template">
+    Top Right
+  </script>
+
+  <div class="tooltip-demo" fo-tooltip ng-show="type==='right top'" tooltip-position="right top" tooltip-template-url="tooltip-right-top.html">
+    Right Top
+  </div>
+  <script id="tooltip-right-top.html" type="text/ng-template">
+    Right Top
+  </script>
+
+  <div class="tooltip-demo" fo-tooltip ng-show="type==='right center'" tooltip-position="right center" tooltip-template-url="tooltip-right-center.html">
+    Right Center
+  </div>
+  <script id="tooltip-right-center.html" type="text/ng-template">
+    Right Center
+  </script>
+
+  <div class="tooltip-demo" fo-tooltip ng-show="type==='right bottom'" tooltip-position="right bottom" tooltip-template-url="tooltip-right-bottom.html">
+    <div class="aside">right-bottom</div>
+  </div>
+  <script id="tooltip-right-bottom.html" type="text/ng-template">
+    Right Bottom
+  </script>
+
+  <div class="tooltip-demo" fo-tooltip ng-show="type==='bottom left'" tooltip-position="bottom left" tooltip-template-url="tooltip-bottom-left.html">
+    Bottom left
+  </div>
+  <script id="tooltip-bottom-left.html" type="text/ng-template">
+    Bottom left
+  </script>
+
+  <div class="tooltip-demo" fo-tooltip ng-show="type==='bottom center'" tooltip-position="bottom center" tooltip-template-url="tooltip-bottom-center.html">
+    Bottom Center
+  </div>
+  <script id="tooltip-bottom-center.html" type="text/ng-template">
+    Bottom Center
+  </script>
+
+  <div class="tooltip-demo" fo-tooltip ng-show="type==='bottom right'" tooltip-position="bottom right" tooltip-template-url="tooltip-bottom-right.html">
+    Bottom Right
+  </div>
+  <script id="tooltip-bottom-right.html" type="text/ng-template">
+    Bottom Right
+  </script>
+
+  <div class="tooltip-demo" fo-tooltip ng-show="type==='left top'" tooltip-position="left top" tooltip-template-url="tooltip-left-top.html">
+    Bottom Top
+  </div>
+  <script id="tooltip-left-top.html" type="text/ng-template">
+    Bottom Top
+  </script>
+
+  <div class="tooltip-demo" fo-tooltip ng-show="type==='left center'" tooltip-position="left center" tooltip-template-url="tooltip-left-center.html">
+    Left Center
+  </div>
+  <script id="tooltip-left-center.html" type="text/ng-template">
+    Left Center
+  </script>
+
+  <div class="tooltip-demo" fo-tooltip ng-show="type==='left bottom'" tooltip-position="left bottom" tooltip-template-url="tooltip-left-bottom.html">
+    Left Bottom
+  </div>
+  <script id="tooltip-left-bottom.html" type="text/ng-template">
+    Left Bottom
+  </script>
+
+  <div class="">
+    <select class="drop-select" ng-change="select($event)" ng-model="type" ng-options="type.position as type.name for type in types">
+      <option value="">Top Left</option>
+    </select>
+  </div>
+
+  <br/>
+  <a class="github" href="https://github.com/forsigner/fo-tooltip" target="_blank">
+    <i class="fa fa-github-alt"></i>
+    view on github
+  </a>
+</div>

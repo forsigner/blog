@@ -1,0 +1,260 @@
+  <!-- <div id="open" class="popover-demo" ng-click="open()">
+    <h3 class="title">Delete</h3>
+    <span class="aside">Bottom Left Diagonal</span>
+  </div>
+
+  <script id="open.html" type="text/ng-template">
+    <div class="popover-header">
+      Delete ?
+    </div>
+    <div class="popover-body">
+      <button class="btn btn-primary" ng-click="yes()">确认</button>
+      <button class="btn btn-default" ng-click="closePopover()">取消</button>
+    </div>
+  </script>
+ -->
+
+
+<div class="content">
+  <div class="description">
+    <h1>fo-popover</h1>
+    <span>A nice Popover for Angular</span>
+  </div>
+
+  <div class="popover-demo" fo-popover ng-show="!type" popover-position="top left" popover-template="popover-top-left.html">
+    <h3 class="title">Delete</h3>
+    <span class="aside">Top Left</span>
+  </div>
+  <script id="popover-top-left.html" type="text/ng-template">
+    <div class="popover-header">
+      Delete ?
+    </div>
+    <div class="popover-body">
+      <button class="btn btn-primary" ng-click="yes()">确认</button>
+      <button class="btn btn-default" ng-click="closePopover()">取消</button>
+    </div>
+  </script>
+
+  <div class="popover-demo" fo-popover ng-show="type==='top center'" popover-position="top center" popover-template="popover-top-left.html">
+    <h3 class="title">Delete</h3>
+    <span class="aside">Top Middle</span>
+  </div>
+  <script id="popover-top-center.html" type="text/ng-template">
+    <div class="popover-header">
+      Delete ?
+    </div>
+    <div class="popover-body">
+      <button class="btn btn-primary" ng-click="yes()">确认</button>
+      <button class="btn btn-default" ng-click="closePopover()">取消</button>
+    </div>
+  </script>
+
+  <div class="popover-demo" fo-popover ng-show="type==='top right'" popover-position="top right" popover-template="popover-top-right.html">
+    <h3 class="title">Delete</h3>
+    <span class="aside">Top Right</span>
+  </div>
+  <script id="popover-top-right.html" type="text/ng-template">
+    <div class="popover-header">
+      Delete ?
+    </div>
+    <div class="popover-body">
+      <button class="btn btn-primary" ng-click="yes()">确认</button>
+      <button class="btn btn-default" ng-click="closePopover()">取消</button>
+    </div>
+  </script>
+
+  <div class="popover-demo" fo-popover ng-show="type==='right top'" popover-position="right top" popover-template="popover-right-top.html">
+    <h3 class="title">Delete</h3>
+    <span class="aside">Right Top</span>
+  </div>
+  <script id="popover-right-top.html" type="text/ng-template">
+    <div class="popover-header">
+      Delete ?
+    </div>
+    <div class="popover-body">
+      <button class="btn btn-primary" ng-click="yes()">确认</button>
+      <button class="btn btn-default" ng-click="closePopover()">取消</button>
+    </div>
+  </script>
+
+  <div class="popover-demo" fo-popover ng-show="type==='right center'" popover-position="right center" popover-template="popover-right-top.html">
+    <h3 class="title">Delete</h3>
+    <span class="aside">Right Middle</span>
+  </div>
+  <script id="popover-right-center.html" type="text/ng-template">
+    <div class="popover-header">
+      Delete ?
+    </div>
+    <div class="popover-body">
+      <button class="btn btn-primary" ng-click="yes()">确认</button>
+      <button class="btn btn-default" ng-click="closePopover()">取消</button>
+    </div>
+  </script>
+
+  <div class="popover-demo" fo-popover ng-show="type==='right bottom'" popover-position="right bottom" popover-template="popover-right-bottom.html">
+    <h3 class="title">Delete</h3>
+    <span class="aside">Right Bottom</span>
+  </div>
+  <script id="popover-right-bottom.html" type="text/ng-template">
+    <div class="popover-header">
+      Delete ?
+    </div>
+    <div class="popover-body">
+      <button class="btn btn-primary" ng-click="yes()">确认</button>
+      <button class="btn btn-default" ng-click="closePopover()">取消</button>
+    </div>
+  </script>
+
+  <div class="popover-demo" fo-popover ng-show="type==='bottom left'"  popover-position="bottom left" popover-template="popover-bottom-left.html">
+    <h3 class="title">Delete</h3>
+    <span class="aside">Bottom Left</span>
+  </div>
+  <script id="popover-bottom-left.html" type="text/ng-template">
+    <div class="popover-header">
+      Delete ?
+    </div>
+    <div class="popover-body">
+      <button class="btn btn-primary" ng-click="yes()">确认</button>
+      <button class="btn btn-default" ng-click="closePopover()">取消</button>
+    </div>
+  </script>
+
+  <div class="popover-demo" fo-popover ng-show="type==='bottom center'" popover-position="bottom center" popover-template="popover-bottom-center.html">
+    <h3 class="title">Delete</h3>
+    <span class="aside">Bottom Right</span>
+  </div>
+  <script id="popover-bottom-center.html" type="text/ng-template">
+    <div class="popover-header">
+      Delete ?
+    </div>
+    <div class="popover-body">
+      <button class="btn btn-primary" ng-click="yes()">确认</button>
+      <button class="btn btn-default" ng-click="closePopover()">取消</button>
+    </div>
+  </script>
+
+  <div class="popover-demo" fo-popover ng-show="type==='bottom right'" popover-position="bottom right" popover-template="popover-bottom-right.html">
+    <h3 class="title">Delete</h3>
+    <span class="aside">Bottom Right</span>
+  </div>
+  <script id="popover-bottom-right.html" type="text/ng-template">
+    <div class="popover-header">
+      Delete ?
+    </div>
+    <div class="popover-body">
+      <button class="btn btn-primary" ng-click="yes()">确认</button>
+      <button class="btn btn-default" ng-click="closePopover()">取消</button>
+    </div>
+  </script>
+
+  <div class="popover-demo" fo-popover ng-show="type==='left top'" popover-position="left top" popover-template="popover-left-top.html">
+    <h3 class="title">Delete</h3>
+    <span class="aside">Left Top</span>
+  </div>
+  <script id="popover-left-top.html" type="text/ng-template">
+    <div class="popover-header">
+      Delete ?
+    </div>
+    <div class="popover-body">
+      <button class="btn btn-primary" ng-click="yes()">确认</button>
+      <button class="btn btn-default" ng-click="closePopover()">取消</button>
+    </div>
+  </script>
+
+  <div class="popover-demo" fo-popover ng-show="type==='left center'" popover-position="left center" popover-template="popover-left-center.html">
+    <h3 class="title">Delete</h3>
+    <span class="aside">Left Middle</span>
+  </div>
+  <script id="popover-left-center.html" type="text/ng-template">
+    <div class="popover-header">
+      Delete ?
+    </div>
+    <div class="popover-body">
+      <button class="btn btn-primary" ng-click="yes()">确认</button>
+      <button class="btn btn-default" ng-click="closePopover()">取消</button>
+    </div>
+  </script>
+
+  <div class="popover-demo" fo-popover ng-show="type==='left bottom'" popover-position="left bottom" popover-template="popover-left-bottom.html">
+    <h3 class="title">Delete</h3>
+    <span class="aside">Left Bottom</span>
+  </div>
+  <script id="popover-left-bottom.html" type="text/ng-template">
+    <div class="popover-header">
+      Delete ?
+    </div>
+    <div class="popover-body">
+      <button class="btn btn-primary" ng-click="yes()">确认</button>
+      <button class="btn btn-default" ng-click="closePopover()">取消</button>
+    </div>
+  </script>
+
+
+  <div class="popover-demo" fo-popover ng-show="type==='top left diagonal'" popover-position="top left diagonal" popover-template="top-left-diagonal.html">
+    <h3 class="title">Delete</h3>
+    <span class="aside">Top Left Diagonal</span>
+  </div>
+  <script id="top-left-diagonal.html" type="text/ng-template">
+    <div class="popover-header">
+      Delete ?
+    </div>
+    <div class="popover-body">
+      <button class="btn btn-primary" ng-click="yes()">确认</button>
+      <button class="btn btn-default" ng-click="closePopover()">取消</button>
+    </div>
+  </script>
+
+  <div class="popover-demo" fo-popover ng-show="type==='top right diagonal'" popover-position="top right diagonal" popover-template="top-right-diagonal.html">
+    <h3 class="title">Delete</h3>
+    <span class="aside">Top Right Diagonal</span>
+  </div>
+  <script id="top-right-diagonal.html" type="text/ng-template">
+    <div class="popover-header">
+      Delete ?
+    </div>
+    <div class="popover-body">
+      <button class="btn btn-primary" ng-click="yes()">确认</button>
+      <button class="btn btn-default" ng-click="closePopover()">取消</button>
+    </div>
+  </script>
+
+  <div class="popover-demo" fo-popover ng-show="type==='bottom left diagonal'" popover-position="bottom left diagonal" popover-template="bottom-left-diagonal.html">
+    <h3 class="title">Delete</h3>
+    <span class="aside">Bottom Left Diagonal</span>
+  </div>
+  <script id="bottom-left-diagonal.html" type="text/ng-template">
+    <div class="popover-header">
+      Delete ?
+    </div>
+    <div class="popover-body">
+      <button class="btn btn-primary" ng-click="yes()">确认</button>
+      <button class="btn btn-default" ng-click="closePopover()">取消</button>
+    </div>
+  </script>
+
+  <div class="popover-demo" fo-popover ng-show="type==='bottom right diagonal'" popover-position="bottom right diagonal" popover-template="bottom-right-diagonal.html">
+    <h3 class="title">Delete</h3>
+    <span class="aside">Bottom Right Diagonal</span>
+  </div>
+  <script id="bottom-right-diagonal.html" type="text/ng-template">
+    <div class="popover-header">
+      Delete ?
+    </div>
+    <div class="popover-body">
+      <button class="btn btn-primary" ng-click="yes()">确认</button>
+      <button class="btn btn-default" ng-click="closePopover()">取消</button>
+    </div>
+  </script>
+
+  <div class="">
+    <select class="drop-select" ng-change="select($event)" ng-model="type" ng-options="type.position as type.name for type in types">
+      <option value="">Top Left</option>
+    </select>
+  </div>
+
+  <br/>
+  <a class="github" href="https://github.com/forsigner/fo-popover" target="_blank">
+    <i class="fa fa-github-alt"></i>
+    view on github
+  </a>
+</div>
