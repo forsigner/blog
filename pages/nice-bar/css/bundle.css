@@ -2537,7 +2537,7 @@ a:visited {
   width: 800px;
   height: 100%;
   height: 500px;
-  margin: 30px auto;
+  margin: 50px auto;
   padding: 0;
   border-radius: 6px;
 }
@@ -2619,7 +2619,7 @@ a:visited {
   border: 1px solid #dfdfdf;
   border-top: 1px solid #f0f0f0;
   box-shadow: 0 10px 60px 0 rgba(0, 0, 0, 0.1);
-  margin-top: 100px;
+  margin-top: 120px;
 }
 .box.box-light .sidebar {
   background-color: #fafafa;
@@ -2710,27 +2710,4 @@ a:visited {
 }
 .box.box-dark .main .main-body a.github.github i {
   color: #e98b39;
-}
-.home {
-  position: absolute;
-  top: -70px;
-  left: -70px;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  text-align: center;
-  border: 1px solid #02b875;
-}
-.home:hover {
-  border: 1px solid #00ab6b;
-}
-.home i {
-  bottom: 20px;
-  right: 20px;
-  position: absolute;
-  font-size: 40px;
-  color: #02b875;
-}
-.home i:hover {
-  color: #00ab6b;
 }
