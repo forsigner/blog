@@ -2384,3 +2384,6 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
     color: #02b875; }
     .home i:hover {
       color: #00ab6b; }
+
+.avatar {
+  left: 45px !important; }
