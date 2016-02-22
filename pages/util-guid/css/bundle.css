@@ -2122,23 +2122,3 @@
   color: #222; }
   .github:hover {
     color: #000; }
-
-.home {
-  position: absolute;
-  top: -70px;
-  left: -70px;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  text-align: center;
-  border: 1px solid #02b875; }
-  .home:hover {
-    border: 1px solid #00ab6b; }
-  .home i {
-    bottom: 20px;
-    right: 20px;
-    position: absolute;
-    font-size: 40px;
-    color: #02b875; }
-    .home i:hover {
-      color: #00ab6b; }
