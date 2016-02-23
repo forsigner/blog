@@ -58,7 +58,3 @@ tags: [life]
 ![云南旅游](/images/9.jpg)
 
 机翼
-
-####这就是我
-
-![云南旅游](/images/10.jpg)
