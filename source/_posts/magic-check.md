@@ -24,8 +24,13 @@ Radio和checkbox需要美化吗？答案是必须的，因为设计风格一直�
 
 用法非常简单，最好用Bower和npm进行管理，先Install：
 
-- bower: ``` bower install --save magic-check```
-- npm:  ```npm install --save magic-check```
+``` bash
+# bower:
+$ bower install --save magic-check
+
+# npm:
+$ npm install --save magic-check
+```
 
 然后加载CSS文件：
 
