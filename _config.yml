@@ -74,3 +74,12 @@ deploy:
   repo: git@github.com:forsigner/forsigner.github.io.git
   # branch: [branch]
   # message: [message]
+
+
+
+# Rss
+feed:
+  type: atom
+  path: atom.xml
+  limit: 0
+  hub:
