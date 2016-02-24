@@ -1,7 +1,7 @@
 ---
 title: 一个极简主义设计的 Hexo 主题
 date: 2016-02-23
-tags: [JavaScript]
+tags: [JavaScript,Hexo]
 categories: 设计
 ---
 
