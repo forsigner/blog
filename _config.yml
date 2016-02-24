@@ -75,7 +75,7 @@ deploy:
   # branch: [branch]
   # message: [message]
 
-# Rss
+# RSS
 feed:
   type: atom
   path: atom.xml
