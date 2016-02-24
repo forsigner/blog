@@ -39,7 +39,7 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: true
   tab_replace:
 
@@ -74,8 +74,3 @@ deploy:
   repo: git@github.com:forsigner/forsigner.github.io.git
   # branch: [branch]
   # message: [message]
-
-disqus_shortname: forsigner
-
-tag_generator:
-  per_page: 10
