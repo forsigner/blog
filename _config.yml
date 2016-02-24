@@ -75,11 +75,17 @@ deploy:
   # branch: [branch]
   # message: [message]
 
-
-
 # Rss
 feed:
   type: atom
   path: atom.xml
   limit: 0
   hub:
+
+# hexo-generator-sitemap
+sitemap:
+  path: sitemap.xml
+
+# hexo-generator-baidu-sitemap
+baidusitemap:
+  path: baidusitemap.xml
