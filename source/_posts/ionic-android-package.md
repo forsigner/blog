@@ -1,7 +1,8 @@
 ---
-title: "ionic android打包"
+title: ionic android打包
 date: 2015-3-12
 tags: [ionic]
+categories: 前端
 ---
 
 
@@ -67,7 +68,3 @@ $ zipalign -v 4 HelloWorld-release-unsigned.apk HelloWorld.apk
 ```
 
 done
-
-
-
-

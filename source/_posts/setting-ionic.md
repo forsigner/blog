@@ -1,7 +1,8 @@
 ---
-title: "Mac中配置ionic框架"
+title: Mac中配置ionic框架
 date: 2015-02-27
 tags: [ionic]
+categories: 前端
 ---
 
 最近想做一个App，却苦于自己没有那么多精力去学习Java和Object-C，自己只对JavaScript最熟悉，所以决定用Web来实现，也就是做一Hybrid App。

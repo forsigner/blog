@@ -1,8 +1,8 @@
-
 ---
-title: "IE Haslayout"
+title: IE Haslayout
 date: 2013-03-18
 tags: [CSS]
+categories: 前端
 ---
 
 
@@ -138,7 +138,7 @@ IE 5-6/Win 的3像素文本偏移bug示意图
 * html img.myFloat { margin: 0 -3px; ma\rgin: 0; }
 /* End hide from IE5/Mac */
 ```
-    
+
 这会解决问题，但是采用的方式很难看而且太复杂。因此，如果可能的话，最好将这些规则分别放进单独的浏览器特定的样式表中。如果这样做，用于Windows上的lE 5.x的样式表如下：
 
 ``` css
@@ -151,7 +151,7 @@ IE 6的样式表如下:
 p { height: 1%; margin-left: 0; }
 img.myFloat { margin: 0; }
 ```
-    
+
 IE 6躲躲猫bug
 
 另一个奇怪而且很烦人的 bug 是IE6 的躲躲猫(peek-a-boo) bug，之所以起这个名称是因为在某些条件下文本看起来消失了，只有在前新装载页面时才再度出现。出现这个bug的条件是:一个浮动元素后面跟着一些非浮动元素，然后是一个清理元素，所有这些元素都包含在一个设置了背景颜色或阅像的父元束中。如果清理元素碰到了浮动元素，那么中间的作浮动元素看起来消失了，隐藏到了父元素的背景颜色或图像后面，只有在刷新页面时才重新出现(见图9-9)。
@@ -185,7 +185,7 @@ IE5.x对相对容器中的绝对定位元素的定位方式不正确
 * html .container { height: 1%; }
 /* End hide from IE-Mac */
 ```
-    
+
 停止对IE 的批评
 
 IE 并不足惟一一种有bug 的浏览器，所以你可能会奇怪我为什么只关注IE bug。 不必担心，我找并不是专门和微软过不去，这么做是有理由的。
@@ -209,4 +209,3 @@ bug时，许多开发人员会尝试寻找修复方法或解决方案。由于IE
 - IE Haslayout 详解
 - IE hasLayout的问题总结
 - On having layout
-

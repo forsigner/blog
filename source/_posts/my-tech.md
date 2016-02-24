@@ -1,7 +1,8 @@
 ---
-title: "我的技术栈"
+title: 我的技术栈
 date: 2015-01-03
-tags: []
+tags: [工具]
+categories: 工具
 ---
 
 

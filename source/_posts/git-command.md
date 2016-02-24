@@ -1,7 +1,8 @@
 ---
-title: "常用git命令"
+title: 常用git命令
 date: 2013-08-22
 tags: [git]
+categories: 工具
 ---
 
 
@@ -141,12 +142,3 @@ git add -i  #交互地添加文件至缓存区
 * [gittutorial](https://www.kernel.org/pub/software/scm/git/docs/gittutorial.html)
 * [git Manual Page](https://www.kernel.org/pub/software/scm/git/docs/)
 * [Git User’s Manual](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html)
-
-
-
-
-
-
-
-
-

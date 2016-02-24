@@ -1,7 +1,8 @@
 ---
-title: "Unix 系统下常用命令"
+title: Unix 系统下常用命令
 date: 2013-08-23
-tags: []
+tags: [Unix]
+categories: 工具
 ---
 
 ## 文件操作

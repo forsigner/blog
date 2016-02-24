@@ -1,7 +1,8 @@
 ---
-title: "ionic Mac下连接android手机调试"
+title: ionic Mac下连接android手机调试
 date: 2015-03-07
 tags: [ionic, android]
+categories: 前端
 ---
 
 
@@ -55,6 +56,3 @@ $ ionic run android
 ```
 
 当然,你使用Eclipse或Android Studio开发Android App时，同样可以使用这种方法连接你的Android设备。
-
-
-

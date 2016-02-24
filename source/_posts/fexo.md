@@ -1,7 +1,8 @@
 ---
-title: "一个极简主义设计的 Hexo 主题"
+title: 一个极简主义设计的 Hexo 主题
 date: 2016-02-23
 tags: [JavaScript]
+categories: 设计
 ---
 
 作为设计师出身的前端攻城狮， blog 用着别人的主题终究还是不爽，于是花了两天晚上写了一个 Hexo 主题。

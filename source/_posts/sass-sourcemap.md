@@ -1,7 +1,8 @@
 ---
-title: "在Chrome下调试Sass"
+title: 在Chrome下调试Sass
 date: 2013-12-06
 tags: [CSS,Sass]
+categories: 前端
 ---
 
 用Sass写CSS很爽，但是调试起来却让人头痛，因为CSS文件是编译生成的，所以在Chrome调试时得出的CSS位置信息并没有多大帮助。为了解决Sass的调试难题，也有开发这开发了一些Chrome插件，如[SASS Inspector](https://chrome.google.com/webstore/detail/sass-inspector/lkofmbmllpgfbnonmnenkiakimpgoamn), 我体验了一整子，用起来并不是很舒服。

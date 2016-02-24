@@ -1,7 +1,8 @@
 ---
-title: "云南之行"
+title: 云南之行
 date: 2014-03-24
 tags: [life]
+categories: 生活
 ---
 
 

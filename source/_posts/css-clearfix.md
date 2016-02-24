@@ -1,7 +1,8 @@
 ---
-title: "清除浮动的方法"
+title: 清除浮动的方法
 date: 2013-03-25
 tags: [CSS]
+categories: 前端
 ---
 
 float是网页布局中最常用的css属性之一，但是使用float同样会带来各种各样的问题，例如它使元素脱离正常的文档流，使父元素的高度坍塌等，所以我们经常要清除浮动。
@@ -74,12 +75,12 @@ float是网页布局中最常用的css属性之一，但是使用float同样会�
 相对于空标签闭合浮动的方法代码似乎还是有些冗余，通过查询发现Unicode字符里有一个“零宽度空格”，也就是U+200B ，这个字符本身是不可见的，所以我们完全可以省略掉 visibility:hidden了。
 
 ``` css
-.clearfix:after 
+.clearfix:after
 {
         content:"\200B";
         display:block;
         height:0;
-        clear:both; 
+        clear:both;
 }
 .clearfix {
         *zoom:1;
@@ -96,11 +97,11 @@ float是网页布局中最常用的css属性之一，但是使用float同样会�
         content:"";
         display:table;
 }
-.cf:after { 
+.cf:after {
         clear:both; /* For IE 6/7 (trigger hasLayout) */
 }
 .cf {
-        zoom:1; 
+        zoom:1;
 }
 ```
 
@@ -111,4 +112,3 @@ float是网页布局中最常用的css属性之一，但是使用float同样会�
 - 那些年我们一起清除过的浮动
 - 清理浮动的几种方法以及对应规范说明
 - 更简洁的 CSS 清理浮动方式
-

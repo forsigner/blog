@@ -1,7 +1,8 @@
 ---
-title: "CSS BFC(Block Formatting Context)"
+title: CSS BFC(Block Formatting Context)
 date: 2013-03-20
 tags: [CSS]
+categories: 前端
 ---
 
 
@@ -44,5 +45,3 @@ The quick brown fox jumped over the lazy dog's back. The quick brown fox jumped 
 因此要解决margin重叠问题，只要让它们不在同一个BFC就行了，但是对于两个相邻元素来说，意义不大，没有必要给它们加个外壳，但是对于嵌套元素来说就很有必要了，只要把父元素设为BFC就可以了。这样子元素的margin就不会和父元素的margin发生重叠了。
 
 摘自：http://www.w3cmm.com/other/css-bfcblock-formatting-context.html
-
-

@@ -1,7 +1,8 @@
 ---
-title: "关于此博客"
+title: 关于此博客
 date: 2013-07-28
 tags: [life]
+categories: 随笔
 ---
 
 

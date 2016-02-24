@@ -1,7 +1,8 @@
 ---
-title: "不可错过的Angular scrollbar library"
+title: 不可错过的Angular scrollbar library
 date: 2016.02.17
 tags: [JavaScript]
+categories: 前端
 ---
 
 最近，工作中忙于开发一个desktop apps，主要技术基于 [electron](https://github.com/atom/electron) 和 [angular.js](https://github.com/angular/angular.js) 。开发过程中，发现在 Windows 中滚动条巨丑无敌，作为一个设计出身的程序猿，我当然不能忍，于是我用下班时间造了一个 scrollbar 轮子，叫 **[angular-nice-bar](https://github.com/forsigner/angular-nice-bar)** （[查看 Demo](http://forsigner.com/nice-bar/)）。

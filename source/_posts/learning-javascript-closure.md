@@ -1,7 +1,8 @@
 ---
-title: "Javascript闭包"
+title: Javascript闭包
 date: 2013-02-13
 tags: [JavaScript]
+categories: 前端
 ---
 
 
@@ -84,7 +85,7 @@ alert(foo.getX()); // 获得闭包 "x" – 10
 ``` js
 var a = 10;
 setTimeout(function () {
-    alert(a); // 10, after one second 
+    alert(a); // 10, after one second
 },  1000);
 ```
 
@@ -104,4 +105,3 @@ xmlHttpRequestObject.onreadystatechange = function() {
 这里没深入讨论闭包的理论，有兴趣的同学建议去看看大叔的博客和他的的深入理解JavaScript系列。
 
 done。
-

@@ -1,7 +1,8 @@
 ---
-title: "ionic常用命令"
+title: ionic常用命令
 date: 2015-03-01
 tags: [ionic]
+categories: 前端
 ---
 
 下面是ionic常用命令，或者在终端执行“ionic -h”也可以查看，由于这些命令会重复利用，所以还是整理一下，方便自己和别人。

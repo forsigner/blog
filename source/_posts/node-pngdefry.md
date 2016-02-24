@@ -1,7 +1,8 @@
 ---
-title: "用JavaScript修复ipa处理过的的png图片"
+title: 用JavaScript修复ipa处理过的的png图片
 date: 2016.02.16
-tags: [JavaScript]
+tags: [JavaScript, Node.js]
+categories: 后端
 ---
 
 最近做项目遇到一个需求：**解析apk和ipa包，然后把里面的icon上传到服务器。**

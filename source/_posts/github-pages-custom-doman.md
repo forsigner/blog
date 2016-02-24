@@ -1,7 +1,8 @@
 ---
-title: "Github Pages绑定域名"
+title: Github Pages绑定域名
 date: 2012-11-12
-tags: []
+tags: [git]
+categories: 工具
 ---
 
 Github Pages的默认域名是github的二级域名username.github.com或者username.github.io，需要绑定自己的独立域名的话也非常简单，只要以下两步：

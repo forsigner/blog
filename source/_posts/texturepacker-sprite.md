@@ -1,7 +1,8 @@
 ---
-title: "好用的CSS sprite工具-TexturePacker"
+title: 好用的CSS sprite工具-TexturePacker
 date: 2013-08-01
 tags: [CSS]
+categories: 前端
 ---
 
 

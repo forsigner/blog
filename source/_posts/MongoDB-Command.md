@@ -1,20 +1,21 @@
+---
 title: MongoDB Shell Command
 date: 2015-07-01 22:10:10
 tags: [MongoDB]
+categories: 后端
 ---
-
 
 
 ## 登录数据库
 
 ``` python
-mongod <hostname|ip> # 登录MongoDB 
+mongod <hostname|ip> # 登录MongoDB
 
 ```
 
 ## 创建数据库
 
-``` python 
+``` python
 
 use <dbname> # 切换到某个数据库 | 创建数据库
 db # 查看当前数据库
@@ -24,14 +25,14 @@ db.hello.insert({"name":"testdb"}) # 该操作会在test2数据库中新建一�
 
 ## 删除数据库
 
-``` python 
+``` python
 db.dropDatabase() # 删除数据库
 
 ```
 
 ## 创建collection
 
-``` python 
+``` python
 db.createCollection(name, options)
 db.createCollection("Hello", { capped : true, autoIndexID : true, size : 6142800, max : 10000 } )
 db.Hello.insert({"hello" : "world"}) 插入数据自动创建collection
@@ -43,21 +44,21 @@ db.Hello.renameCollection("hi") # 重命名collection
 
 ## 删除collection
 
-``` python 
+``` python
 db.<collection_name>.drop() # 删除collection
 
 ```
 
 ## 插入document
 
-``` python 
+``` python
 db.<collection_name>.insert(<document>)
 
 ```
 
 ## 查询document
 
-``` python 
+``` python
 db.<collection_name>.find() # 查询有document
 db.<collection_name>.find().pretty() # 格式化显示
 
@@ -85,4 +86,3 @@ db.<collection_name>.save({_id:ObjectId(),NEW_DATA})
 db.<collection_name>.remove(DELLETION_CRITTERIA)
 
 ```
-

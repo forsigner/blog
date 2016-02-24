@@ -1,7 +1,8 @@
 ---
-title: "JavaScript 编码风格指南"
+title: JavaScript 编码风格指南
 date: 2013-09-01
 tags: [JavaScript]
+categories: 前端
 ---
 
 程序语言的编码风格指南对于一个长期维护的软件而言是非常重要的。本指南是基于“Java语言编码规范”（Code Conventions fo the Java Programming Language）和Crockford的（JavaScript）规范，同时结合了我个人的经验和喜好做了一些改动。
@@ -109,7 +110,7 @@ if (persion != null) {
 // 不好的写法：
 function doSomething(arg1, arg2, arg3, arg4) {
     if (arg4 != null) {
-        doSomething(Else); 
+        doSomething(Else);
     }
 }
 ```
@@ -209,9 +210,9 @@ var object = {
     key1: value1,
 
     key2: function() {
-        //做些什么 
+        //做些什么
     },
-    
+
     key3: value3
 };
 
@@ -227,7 +228,7 @@ var object = {
 
     key1: value1,
     key2: function() {
-        //做些什么 
+        //做些什么
     },
     key3: value3
 };
@@ -242,7 +243,7 @@ var object = {
 doSomething({
     key1: value1,
     key2: value2
-    
+
 });
 
 // 不好的写法： 所有代码在一行上
@@ -335,7 +336,7 @@ var result = something + somethingElse;// somethingElse will never be null
 ``` js
 // 好的写法
 if (condition) {
-    
+
     /*
      * 如果代码执行到这里
      * 说明通过了所有的安全检测
@@ -630,7 +631,7 @@ function do_something() {
 
 构造函数——通过new运算符创建新对象的函数——也应当以驼峰格式命名并且首字母大写。构造函数名称应一非动词开头，因为new代表这创建一个对象实例的操作。
 
-``` js 
+``` js
 // 好的写法
 function MyObject() {
     // 代码
@@ -673,7 +674,7 @@ var object = {
     _count: 10,
 
     _getCount: function() {
-        return this._count; 
+        return this._count;
     }
 };
 ```
@@ -695,7 +696,7 @@ function doSomething() {
     'use strict';
 
     // 代码
-    
+
 }
 ```
 
@@ -708,11 +709,11 @@ strict”，可以使用立刻被调用的函数。
     'use strict';
 
     function doSomething() {
-        // 代码 
+        // 代码
     }
 
     function doSomethingElse() {
-        // 代码 
+        // 代码
     }
 }());
 ```
@@ -919,7 +920,7 @@ switch (value) {
 
     case 3:
         return true;
-    
+
     defaul:
         throw new Error('This should not happen');
 }
@@ -990,7 +991,7 @@ try {
 * for语句中的表达方式之间应当用空格号隔开。
 
 ## 17.需要避免的
- 
+
 * 切勿使用像String一类的原始包装类型创建新的对象。
 * 避免使用eval（）。
 * 避免使用with语句。该语句在严格模式中不复存在，可能在未来的ECMAScript标准中也将去除。
@@ -1000,4 +1001,3 @@ try {
 
 
 数字应当使用十进制整数，科学计数法表示整数，十六进制整数，或者十进制浮点小数，小数点前后应当至少保留一位数字。避免使用八进制直接量。
-

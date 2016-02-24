@@ -1,7 +1,8 @@
 ---
-title: "用纯CSS美化radio和checkbox"
+title: 用纯CSS美化radio和checkbox
 date: 2016.02.18
 tags: [JavaScript]
+categories: 前端
 ---
 
 Radio和checkbox需要美化吗？答案是必须的，因为设计风格一直都会变化，原生的样式百年不变肯定满足不了需求。
