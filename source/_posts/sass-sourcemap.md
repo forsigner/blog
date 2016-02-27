@@ -20,37 +20,42 @@ CSS source maps默认是启用的，不过你还要启用Auto-reload generated C
 
 **如果直接使用Sass**，因为要支持source map，所以要安装pre版
 
-``` python
-gem install sass -v '>=3.3.0alpha' --pre
+``` bash
+$ gem install sass -v '>=3.3.0alpha' --pre
 ```
 
 安装好后,就可以编译支持source map的CSS了，例如：
 
 
-``` python
-sass --watch --sourcemap sass/styles.scss:css/styles.css # 编译一个style.scss文件
-sass --watch --compass --sourcemap sass/styles.scss:css/styles.css # 编译一个style.scss文件（如果有用到compass）
-sass --watch --sourcemap sass/:css/ # 编译整个文件夹里的所有scss文件
+``` bash
+# 编译一个style.scss文件
+$ sass --watch --sourcemap sass/styles.scss:css/styles.css
+
+# 编译一个style.scss文件（如果有用到compass）
+$ sass --watch --compass --sourcemap sass/styles.scss:css/styles.css 
+
+# 编译整个文件夹里的所有scss文件
+$ sass --watch --sourcemap sass/:css/ 
 ```
 
 
 **如果使用Compass**，为了支持source map，也要要安装pre版
 
-``` python
-gem install compass --pre
+``` bash
+$ gem install compass --pre
 # 或者
-gem install compass-sourcemaps --pre
+$ gem install compass-sourcemaps --pre
 ```
 
 安装好后,在config.rb中添加<code>sass_options = {:sourcemap => true}</code>,就可以编译支持source map的CSS了：
 
-``` python
-compass watch
+``` bash
+$ compass watch
 
 ```
 
 最好，把编译好的css引入到的项目中，然后审查元素，奇迹就出现了。
 
 
-####推荐阅读
+#### 推荐阅读
 - [Working with CSS Preprocessors](https://developers.google.com/chrome-developer-tools/docs/css-preprocessors?hl=zh-CN)

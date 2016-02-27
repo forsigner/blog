@@ -18,9 +18,9 @@ categories: 前端
 - display:inline-block 后的元素为什么会产生水平空隙，这真的是 bug 吗？
 - 如何更好的解决 display:inline-block 元素间产生的水平空隙？
 
-##一、inline-block 前世
+## 一、inline-block 前世
 
-###1.认知
+### 1.认知
 
 也许有人问你为何要写「 display:inline-block; *display:inline; *zoom:1; 」 来兼容 IE6、7 时，你会立马答道：因为 IE6、7 不支持 display:inline-block 呗!不知道何时起，惯性思维给开发者带来了这样一个可怕的概念。万物都是辩证的，当你写下这些的时候，可曾怀疑过大众观点真的可靠吗？也许你认为这些无关 紧要，实现效果就好。但是如果不能理解每个属性或属性值的根本，你将永远无法全面的了解它，人云亦云只会让你浅尝辄止，止步不前。那么这里就涉及到所谓的 「CSS 学习瓶颈」的问题了，这个问题张鑫旭《说说CSS 学习中的瓶颈》一文有详细阐述，虽然部分观点我不是很赞同，但是中心思想还是很值得思考的。文中有几个不错的问题这里也列举出来供大家观摩：
 
@@ -106,7 +106,7 @@ display:inline-block; /* 现代浏览器 +IE6、7 inline 元素 *
 
 小结：IE6、7 并不是不支持 inline-block，只是 block 元素需要做一些处理来达到 inline-block 的效果。
 
-###2. 到底什么是 inline-block
+### 2. 到底什么是 inline-block
 
 说了很多，或许很多朋友还不是太明白到底什么是 inline-block？W3C 在 CSS2.1 The ‘display’ property 中描述如下：
 
@@ -120,7 +120,7 @@ inline-block 后的元素就是一个格式化为行内元素的块容器( Block
 
 怎么样？听起来还不错吧！
 
-###3. inline-block 缘从何起？
+### 3. inline-block 缘从何起？
 
 前面已经证明了 IE 5.5 开始就支持了 inline-block，那么 IE5.5 是什么时候发布的呢？话说当年网景与 IE 大战，IE5.5 那是何等的风骚……（好吧，此处略去十页）。从维基百科的资料来看，IE5.5 beta1 的发布时间是：1999年12月，最终版本是 2000年7月。那么 W3C 标准中是何时才出现 inline-block 这个值的呢？
 
@@ -137,9 +137,9 @@ inline-block 后的元素就是一个格式化为行内元素的块容器( Block
 
 
 
-##二、inline-block 今生
+## 二、inline-block 今生
 
-###1. display:inline-block 后的元素为什么会产生水平空隙，这真的是 bug 吗？
+### 1. display:inline-block 后的元素为什么会产生水平空隙，这真的是 bug 吗？
 
 这么一个神奇的属性，为何大家一直避而远之呢？这恐怕还得从 inline-block 元素之间产生的水平空隙（间隙）说起吧。
 
@@ -189,7 +189,7 @@ For more information about SGML’s specification of line breaks, please consult
 
 
 
-###2.去掉 inline-block 产生的空隙
+### 2.去掉 inline-block 产生的空隙
 
 为了让各个浏览器表现一致，更好的还原视觉设计搞，很多时候我们需要去掉 inline-block 产生的空隙。
 
@@ -269,7 +269,7 @@ word-spacing:-1px;/* IE6、7 */
 上述所有操作都是在父元素设置的，那么子元素都会继承这些属性，字体大小为0了，子元素就什么都看不到了，这并不是我们想要的。 同时字符和单词间距我们也要把它重置为默认值。「font-size: 12px; letter-spacing: normal; word-spacing: normal;」
 最后：inline-block 更好的复用
 或许你会担心每次我都要去看字体和空隙之间大小的关系吗？其实不然，通常情况下，全局字体都已经在 body 中指定了，根据全局字体设置合适的 letter-spacing 负值即可。如此一来，我们便可以放心大胆的使用 inline-block 了，结合 OOCSS 的思想，可以抽离出两个复用的类，在需要设置 inline-block 元素的父级元素上定义一个「.dib-wrap」，该元素自身定义为「.dib」。这里还有一个问题需要注意的是：由于 inline-block 具有 inline 元素的特性，在垂直方向上很多时候我们并不希望元素以「vertical-align:baseline」方式来呈现，所以在「.dib-wrap」中统一重置为「vertical-align:top」即可。
-###3. 去除 inline-block 空隙终极解决方案（2012年8月17日更新）
+### 3. 去除 inline-block 空隙终极解决方案（2012年8月17日更新）
 
 ``` css
 .dib-wrap {
@@ -317,12 +317,12 @@ word-spacing:-1px;/* IE6、7 */
 
 当然，如果你坚持使用把 html 写在一行的方式来达到去除 inline-block 空隙的目的，我只能说：一切以牺牲结构来兼容表现的行为都是耍流氓！所以探讨此种方式去除空隙也将是无意义的，不在本文和作者考虑范围之内。
 
-###4. 结局——本文产生的一些观点如下：
+### 4. 结局——本文产生的一些观点如下：
 
 IE5.5 后开始支持 inline-block， 比 CSS2.1 更早提出 inline-block 的概念并作为所谓的「私有属性值」使用。但是它所支持的 inline-block 不能等同于 CSS2.1 中的 inline-block，IE 5.5、6、7 、8（Q）中 block 元素对 inline-block 支持不完整，因此二者表现出来的效果是不完全一致。
 产生 inline-block 空隙的根本性原因是：HTML 中的换行符、空格符、制表符等合并为空白符，字体大小不为 0 的情况下，空白符自然占据一定的宽度，因此产生了元素间的空隙。
 慎用 -webkit-text-size-adjust:none，它将会导致页面无法通过缩放来改变字体大小。
-##三、inline-block 未来
+## 三、inline-block 未来
 
 如今，Mac 平台下的 Safari 6 已经支持 font-size:0 了，相信很快 Windows 平台的 Safari 如果发布 5.X 的更新，也会支持字体为 font-size:0 了。等到 IE6、7 灭亡之后，世界就真真儿的美妙了！最后说一点：inline-block 与 float 也是无法直接比较的，请不要再讨论 inline-block 和 float 哪个更好的话题了。inline-block 从 IE5.5 一路走来，存在即是合理，以后有时间在总结一下 inline-block 与 float 的使用场景的区别。
 

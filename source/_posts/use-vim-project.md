@@ -14,22 +14,27 @@ project使用法很简单，下面记录下自己常用的几个功能：
 
 下面用project打开一个项目，打开project后输入下面类似的命令：
 
+```
     myproject=var/www/myproject CD=. filter="*.js  *.html *.md" {
         ...
     }
+```
 
 假设myproject文件中有四个文件：jqurey.js index.html readme.md info.php 和一个子文件夹 child，文件夹child两个文件：test.html和sea.js。把光标停在上两行代码中并按下\r刷新，project中应该出现以代码：
 
 
+```
     myproject=var/www/myproject CD=. filter="*.js  *.html *.md" {
         jquery.js
         index.html
         readme.md
     }
+```
 
 在project在添加一行，添加后代码如下：
 
 
+```
     myproject=var/www/myproject CD=. filter="*.js  *.html *.md" {
         jquery.js
         index.html
@@ -38,9 +43,11 @@ project使用法很简单，下面记录下自己常用的几个功能：
 
         }
     }
+```
 
 再使用/r刷新刚添加的那行，project代码应该如下：
 
+```
     myproject=var/www/myproject  CD=.  filter="*.js  *.html *.md"  {
         jquery.js
         index.html
@@ -49,6 +56,7 @@ project使用法很简单，下面记录下自己常用的几个功能：
             sea.js
         }
     }
+```
 
 上面是使用project打开一个项目的简单完整过程，下面是一些自己常用的命令：
 
