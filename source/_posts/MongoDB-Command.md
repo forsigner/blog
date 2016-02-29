@@ -3,6 +3,7 @@ title: MongoDB Shell Command
 date: 2015-07-01 22:10:10
 tags: [MongoDB]
 categories: 后端
+toc: true
 ---
 
 
