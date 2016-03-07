@@ -43,7 +43,7 @@ Demo: [查看](http://forsigner.com/beside/)
 ## Beside 的用法
 
 ```html
-<script src="bower_components/beside/dist/js/beside.js"></script>
+<script src="bower_components/beside/dist/beside.js"></script>
 
 <div id="me">ME</div>
 <div id="you">YOU</div>
