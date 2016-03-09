@@ -88,4 +88,4 @@ sitemap:
 
 # hexo-generator-baidu-sitemap
 baidusitemap:
-  path: baidusitemap.xml
+path: baidusitemap.xml
