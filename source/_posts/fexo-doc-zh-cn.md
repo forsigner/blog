@@ -56,6 +56,28 @@ favicon: /favicon.ico
 keywords: forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript
 ```
 
+## 自定义博客名的字体
+
+由于中文字体文件太大，有的快10M，所以 Fexo 没有引入中文字体，导致博客名有点难看。
+但是可以通过提取字体来减小字体文件大小，让字体只有几KB。
+一下步骤可以让你实现自定义博客名字体，包括英文和中文：
+
+1. 下载免费可用的ttf格式字体
+2. 利用 [Web-Fontmin](http://fontmin.forsigner.com/) 提取字体，然后下载 Web 字体和样式
+3. 在博客根目录的s`source`文件夹新建两个子目录: fonts 和 css
+4. 把下载的字体方式fonts文件夹，把CSS文件放入css文件夹
+5. 修改`theme/fexo/_config.yml`：
+
+```yml
+ # 这是css文件里的font-familiy的值 ,例如里面是 font-familiy: "myfontName"
+blog_name_font_familiy: myFontName
+
+fonts_css_path:
+  - /css/calligraffittiregular.css
+  - /css/second-font.css
+
+```
+
 ## 设置首页内容
 
 你可以设置是否在首页直接显示文章
