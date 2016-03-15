@@ -195,6 +195,19 @@ comments: false
 ---
 ```
 
+## 启用Project页面
+
+1. 在博客根目录执行 `hexo new page project`
+2. 修改`my-blog/source/project/index.md`里面的内容:
+
+```yml
+---
+title: project
+layout: project
+comments: false
+---
+```
+
 ## 启用统计
 
 ```yml
