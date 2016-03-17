@@ -28,14 +28,14 @@ $ git pull
 主题配置全部在`theme/fexo`里面完成，所里下面所有配置指的是配置`theme/fexo/_config.yml`。
 
 ## 设置基本信息
-```yml
+``` bash
 blog_name: Forsigner
 slogan: Find the bug of the world
 ```
 
 ## 设置头像
 
-``` yml
+``` bash
 # relative url
 avatar: /images/avatar.jpg
 # or absolute url
@@ -44,7 +44,7 @@ avatar: https://avatars0.githubusercontent.com/u/2668081?v=3&s=460
 
 ## 设置favicon
 
-``` yml
+``` bash
 favicon: /favicon.ico
 ```
 
@@ -52,7 +52,7 @@ favicon: /favicon.ico
 
 关键词主要作用是优化SEO
 
-```yml
+``` bash
 keywords: forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript
 ```
 
@@ -68,7 +68,7 @@ keywords: forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,fr
 4. 把下载的字体方式fonts文件夹，把CSS文件放入css文件夹
 5. 修改`theme/fexo/_config.yml`：
 
-```yml
+``` bash
  # 这是css文件里的font-familiy的值 ,例如里面是 font-familiy: "myfontName"
 blog_name_font_familiy: myFontName
 
@@ -82,13 +82,13 @@ fonts_css_path:
 
 你可以设置是否在首页直接显示文章
 
-```yml
+``` bash
 init_page_content: HOME_NAV  # HOME_NAV | POST
 ```
 
 ## 设置首页导航
 
-```yml
+``` bash
 home_nav:
   - name: Blog
     url: /archives
@@ -106,7 +106,7 @@ home_nav:
 
 ## 设置页面导航
 
-```yml
+``` bash
 page_nav:
   - 博客: /archives/
   - 分类: /category/
@@ -118,27 +118,27 @@ page_nav:
 
 ## 设置页面导航样式
 
-```yml
+``` bash
 page_nav_style: CIRCLE  # CIRCLE|ROUND_RECT
 ```
 
 ## 设置面包屑
 
-```yml
+``` bash
 breadcrumb:
   isShow: true # true|fase
 ```
 
 ## 设置盒子
 
-```yml
+``` bash
 toolbox:
   isShow: true # true|fase
 ```
 
 ## 设置文章标题对齐方式
 
-```yml
+``` bash
 post:
   header_align: center # left|center
 ```
@@ -148,7 +148,7 @@ post:
 1. 在博客根目录执行 `hexo new page category`
 2. 修改`my-blog/source/category/index.md`里面的内容:
 
-```yml
+``` bash
 ---
 title: category
 layout: category
@@ -161,7 +161,7 @@ comments: false
 1. 在博客根目录执行 `hexo new page tag`
 2. 修改`my-blog/source/tag/index.md`里面的内容:
 
-```yml
+``` bash
 ---
 title: tag
 layout: tag
@@ -174,7 +174,7 @@ comments: false
 1. 在博客根目录执行 `hexo new page link`
 2. 修改`my-blog/source/link/index.md`里面的内容:
 
-```yml
+``` bash
 ---
 title: link
 layout: link
@@ -187,7 +187,7 @@ comments: false
 1. 在博客根目录执行 `hexo new page about`
 2. 修改`my-blog/source/about/index.md`里面的内容:
 
-```yml
+``` bash
 ---
 title: about
 layout: about
@@ -200,7 +200,7 @@ comments: false
 1. 在博客根目录执行 `hexo new page project`
 2. 修改`my-blog/source/project/index.md`里面的内容:
 
-```yml
+``` bash
 ---
 title: project
 layout: project
@@ -210,14 +210,14 @@ comments: false
 
 ## 启用统计
 
-```yml
+``` bash
 google_analytics:
 baidu_analytics: 57e94d016sfsf1fba3xxxx8a2b0263af0
 ```
 
 ## 启用评论
 
-```yml
+``` bash
 disqus_shortname: forsigner
 # duoshuo_shortname: forsigner
 ```
