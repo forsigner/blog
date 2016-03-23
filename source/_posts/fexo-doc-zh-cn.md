@@ -5,21 +5,25 @@ tags: [JavaScript,Hexo]
 categories: 前端
 ---
 
-# 安装
+
+# 开始
+
+## 安装
 
 ```bash
 $ cd my-blog
 $ git clone git@github.com:forsigner/fexo.git themes/fexo
 ```
 
-# 启用
+## 启用
 
 打开博客根目录的 `_config.yml` 设为 `theme: fexo`
 
-# 升级
+## 升级
 
 ```bash
 $ cd themes/fexo
+$ git commit -am 'update'
 $ git pull
 ```
 
@@ -143,6 +147,8 @@ post:
   header_align: center # left|center
 ```
 
+# 启用页面
+
 ## 启用分类页面
 
 1. 在博客根目录执行 `hexo new page category`
@@ -195,7 +201,7 @@ comments: false
 ---
 ```
 
-## 启用Project页面
+## 启用项目页面
 
 1. 在博客根目录执行 `hexo new page project`
 2. 修改`my-blog/source/project/index.md`里面的内容:
@@ -207,6 +213,31 @@ layout: project
 comments: false
 ---
 ```
+
+## 启用搜索页面
+
+- 在博客根目录执行 `hexo new page search`
+- 修改`my-blog/source/search/index.md`里面的内容:
+
+``` bash
+---
+title: search
+layout: search
+comments: false
+---
+```
+
+- 然后安装 Hexo 插件 `hexo-search` (重要)
+
+先进入 blog 的根目录
+
+```bash
+$ cd my-blog
+$ npm install hexo-search --save
+```
+
+
+# 第三方服务
 
 ## 启用统计
 
