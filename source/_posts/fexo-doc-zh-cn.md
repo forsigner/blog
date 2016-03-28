@@ -60,27 +60,6 @@ favicon: /favicon.ico
 keywords: forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript
 ```
 
-## 自定义博客名的字体
-
-由于中文字体文件太大，有的快10M，所以 Fexo 没有引入中文字体，导致博客名有点难看。
-但是可以通过提取字体来减小字体文件大小，让字体只有几KB。
-一下步骤可以让你实现自定义博客名字体，包括英文和中文：
-
-1. 下载免费可用的ttf格式字体
-2. 利用 [Web-Fontmin](http://fontmin.forsigner.com/) 提取字体，然后下载 Web 字体和样式
-3. 在博客根目录的s`source`文件夹新建两个子目录: fonts 和 css
-4. 把下载的字体方式fonts文件夹，把CSS文件放入css文件夹
-5. 修改`theme/fexo/_config.yml`：
-
-``` bash
- # 这是css文件里的font-familiy的值 ,例如里面是 font-familiy: "myfontName"
-blog_name_font_familiy: myFontName
-
-fonts_css_path:
-  - /css/calligraffittiregular.css
-  - /css/second-font.css
-
-```
 
 ## 设置首页内容
 
@@ -149,6 +128,8 @@ post:
 
 # 启用页面
 
+你可以启用你想要的页面，在开启关于、友链、项目的页面后，你可以对这些设置这些页面的内容
+
 ## 启用分类页面
 
 1. 在博客根目录执行 `hexo new page category`
@@ -188,6 +169,29 @@ comments: false
 ---
 ```
 
+启用友链页面后，可以设置类似以下格式的内容
+
+```bash
+link:
+  - name: 织网
+    info: 身体和灵魂，总有一个在路上
+    url: http://zheng-ji.info/
+    avatar: https://avatars3.githubusercontent.com/u/1414745?v=3&s=460
+  - name: Dongyado
+    info: 生命不止，折腾不息
+    url: http://dongyado.com/
+    avatar: https://avatars0.githubusercontent.com/u/6274940?v=3&s=460
+  - name: OrangeCoder
+    info: android ffmpeg nodejs gradle
+    url: http://orangecoder.com/
+    avatar: https://avatars0.githubusercontent.com/u/2263785?v=3&s=460
+  - name: EverET
+    info: 好记性不如烂笔头
+    url: http://everet.org/about-me/
+    avatar: https://avatars1.githubusercontent.com/u/1559563?v=3&s=460
+```
+
+
 ## 启用关于页面
 
 1. 在博客根目录执行 `hexo new page about`
@@ -201,6 +205,36 @@ comments: false
 ---
 ```
 
+启用关于页面后，可以设置类似以下格式的内容:
+
+```bash
+about:
+  - type: me
+    icon: icon-user
+    text_value:
+    - "Scut，1991，Spring."
+    - "喜欢设计，擅长编程，喜欢睡懒觉."
+    - "前端开发工程师，常用 HTML / CSS / JavaScript."
+  - type: Github
+    icon: icon-github
+    text_key: Github
+    text_value: "@forsigner"
+    text_value_url: https://github.com/forsigner
+  - type: weibo
+    icon: icon-weibo
+    text_key: 微博
+    text_value: "@forsigner"
+    text_value_url: http://weibo.com/u/1847075964
+  - type: mail
+    icon: icon-mail
+    text_key: Gmail
+    text_value: "forsigner@gmail.com"
+  - type: location
+    icon: icon-location
+    text_value: 珠海
+```
+
+
 ## 启用项目页面
 
 1. 在博客根目录执行 `hexo new page project`
@@ -213,6 +247,41 @@ layout: project
 comments: false
 ---
 ```
+
+启用项目页面后，可以设置类似以下格式的内容
+
+```bash
+project:
+  - type: personal
+    name: fexo
+    url: https://github.com/forsigner/fexo
+    intro: A minimalist design theme for hexo
+  # - type: company
+  #   name: Fexo
+  #   url: https://github.com/forsigner/fexo
+  #   intro: A minimalist design theme for hexo
+  - type: personal
+    name: beside
+    url: https://github.com/forsigner/beside
+    intro: I need you beside me
+  - type: personal
+    name: web-fontmin
+    url: https://github.com/forsigner/web-fontmin
+    intro: 字体子集化，在线提取你需要的字体
+  - type: personal
+    name: magic-check
+    url: https://github.com/forsigner/magic-check
+    intro: Beautify Radio and Checkbox with pure CSS
+  - type: personal
+    name: nice-bar
+    url: https://github.com/forsigner/nice-bar
+    intro: A nice and lightweight scrollbar
+  - type: personal
+    name: angular-nice-bar
+    url: https://github.com/forsigner/angular-nice-bar
+    intro: A nice and lightweight scrollbar in Angular
+```
+
 
 ## 启用搜索页面
 
@@ -234,6 +303,77 @@ comments: false
 ```bash
 $ cd my-blog
 $ npm install hexo-search --save
+```
+
+# 个性化设置
+
+## 自定义CSS
+
+也许 Fexo 默认的样式满足不了你个性化的需求，使用此配置你可以在不修改 Fexo 源码的情况下，任意的自定义 Fexo 的样式，方法如下：
+
+1. 在 blog 根目录新建文件夹 `my-blog/source/css`
+2. 然后在此目录新建一个 CSS，名字随意，如 `personal-style.css`
+3. 修改`fexo/_config.yml`下面配置，然后你就可以写你想要的样式了
+
+``` bash
+source/css/personal-style.css
+```
+
+比如我的个人自定义样式如下：
+
+```css
+@font-face {
+  font-family: "Meiryo";
+  src: url("/fonts/Meiryo.eot");
+  /* IE9 */
+  src: url("/fonts/Meiryo.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("/fonts/Meiryo.woff") format("woff"), /* chrome, firefox */
+  url("/fonts/Meiryo.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url("/fonts/Meiryo.svg#Meiryo") format("svg");
+  /* iOS 4.1- */
+  font-style: normal;
+  font-weight: normal;
+}
+html {
+  /*background-image: url('/images/bg.jpg')*/
+
+  /*background: linear-gradient( #1abc9c, transparent), linear-gradient( 90deg, skyblue, transparent), linear-gradient( -90deg, coral, transparent);*/
+  /*background-blend-mode: screen;*/
+
+  /*background: linear-gradient(to left, #5f2c82, #49a09d);*/
+}
+```
+
+## 自定义博客名的字体
+
+由于中文字体文件太大，有的快10M，所以 Fexo 没有引入中文字体，导致博客名有点难看。
+但是可以通过提取字体来减小字体文件大小，让字体只有几KB。
+一下步骤可以让你实现自定义博客名字体，包括英文和中文：
+
+1. 下载免费可用的ttf格式字体
+2. 利用 [Web-Fontmin](http://fontmin.forsigner.com/) 提取字体，然后下载 Web 字体和样式
+3. 在博客根目录的`source`文件夹新建目录 `fonts`
+4. 把下载的 web-fontmin 里的 CSS 内容 copy 到你的 `personal-style.css` 里去
+5. 修改`fexo/_config.yml`下面配置，设置字体名称：
+
+
+``` bash
+blog_name_font_familiy: myFontName
+
+# 注意: 这是css文件里的font-familiy的值 ,例如里面是 font-familiy: "myfontName"
+```
+
+PS：自定义博客名字体前请先自定义CSS
+
+
+## 为首页设置背景
+
+如果你不喜欢首页简洁的白色，想个性化一点，你可以自定义首页的背景颜色或者图片
+
+```css
+html {
+  background-image: url('/images/bg.jpg')
+}
 ```
 
 
