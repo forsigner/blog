@@ -114,9 +114,28 @@ breadcrumb:
 
 ## 设置盒子
 
+你可设置盒子是否显示和其显示的文字
+
 ``` bash
 toolbox:
   isShow: true # true|fase
+  text: 盒子
+```
+
+# 搜索页面 Slogan
+
+``` bash
+search_slogan:
+  isShow: true # true|fase
+  text: Can you find the bug of world ~
+```
+
+# 友链页面 Slogan
+
+``` bash
+link_slogan:
+  isShow: true # true|fase
+  text: 交换友链可以邮件 forsigner@gmail.com
 ```
 
 ## 设置文章标题对齐方式
