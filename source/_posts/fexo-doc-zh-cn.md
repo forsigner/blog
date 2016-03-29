@@ -122,7 +122,7 @@ toolbox:
   text: 盒子
 ```
 
-# 搜索页面 Slogan
+## 搜索页面 Slogan
 
 ``` bash
 search_slogan:
@@ -130,7 +130,7 @@ search_slogan:
   text: Can you find the bug of world ~
 ```
 
-# 友链页面 Slogan
+## 友链页面 Slogan
 
 ``` bash
 link_slogan:
