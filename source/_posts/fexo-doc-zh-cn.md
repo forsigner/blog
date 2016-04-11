@@ -353,7 +353,7 @@ source/css/personal-style.css
   font-style: normal;
   font-weight: normal;
 }
-html {
+html.page-home {
   /*background-image: url('/images/bg.jpg')*/
 
   /*background: linear-gradient( #1abc9c, transparent), linear-gradient( 90deg, skyblue, transparent), linear-gradient( -90deg, coral, transparent);*/
@@ -390,7 +390,7 @@ PS：自定义博客名字体前请先自定义CSS
 如果你不喜欢首页简洁的白色，想个性化一点，你可以自定义首页的背景颜色或者图片
 
 ```css
-html {
+html.page-home {
   background-image: url('/images/bg.jpg')
 }
 ```
