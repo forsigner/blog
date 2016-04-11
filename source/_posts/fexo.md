@@ -19,8 +19,9 @@ Demo：http://forsigner.com/
 - 兼容主流浏览器，包括低版本IE
 
 主题截图：
-![screenshot-1.png](http://forsigner.com/images/screenshot-1.png)
-![screenshot-2.png](http://forsigner.com/images/screenshot-2.png)
+![screenshot-1.png](http://forsigner.com/images/fexo/mobile.png)
+![screenshot-1.png](http://forsigner.com/images/fexo/fexo-1.png)
+![screenshot-2.png](http://forsigner.com/images/fexo/fexo-2.png)
 
 ## 怎样使用
 
