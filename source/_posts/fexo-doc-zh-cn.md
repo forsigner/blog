@@ -394,7 +394,7 @@ html.page-home {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0jjj;
+  right: 0;
   bottom: 0;
   background-image: url('/images/bg.jpg');
   background-color: transparent;
