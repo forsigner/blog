@@ -391,10 +391,23 @@ PS：自定义博客名字体前请先自定义CSS
 
 ```css
 html.page-home {
-  background-image: url('/images/bg.jpg')
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0jjj;
+  bottom: 0;
+  background-image: url('/images/bg.jpg');
+  background-color: transparent;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  /*background: linear-gradient( #1abc9c, transparent), linear-gradient( 90deg, skyblue, transparent), linear-gradient( -90deg, coral, transparent);*/
+  /*background-blend-mode: screen;*/
+
+  /*background: linear-gradient(to left, #5f2c82, #49a09d);*/
 }
 ```
-
 
 # 第三方服务
 
