@@ -335,7 +335,8 @@ $ npm install hexo-search --save
 3. 修改`fexo/_config.yml`下面配置，然后你就可以写你想要的样式了
 
 ``` bash
-source/css/personal-style.css
+personal_style: /css/personal-style.css
+# 如果不想启用自定义样式，注释这行就可以了
 ```
 
 比如我的个人自定义样式如下：
