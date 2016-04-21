@@ -89,3 +89,6 @@ sitemap:
 # hexo-generator-baidu-sitemap
 baidusitemap:
 path: baidusitemap.xml
+
+# plugins:
+# - hexo-renderer-mathjax
