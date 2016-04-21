@@ -425,3 +425,9 @@ baidu_analytics: 57e94d016sfsf1fba3xxxx8a2b0263af0
 disqus_shortname: forsigner
 # duoshuo_shortname: forsigner
 ```
+
+##  使用 Mathjax
+
+要使用 Mathjax，可以通过 Hexo 插件 [hexo-renderer-mathjax](https://github.com/phoenixcw/hexo-renderer-mathjax)支持
+
+查看 hexo-renderer-mathjax [文档](https://github.com/phoenixcw/hexo-renderer-mathjax)
