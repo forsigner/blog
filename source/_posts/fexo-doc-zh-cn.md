@@ -390,6 +390,8 @@ PS：自定义博客名字体前请先自定义CSS
 
 如果你不喜欢首页简洁的白色，想个性化一点，你可以自定义首页的背景颜色或者图片
 
+修改`personal-style.css`:
+
 ```css
 html.page-home {
   position: absolute;
