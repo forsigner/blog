@@ -2109,7 +2109,7 @@
       .container .item .stats span {
         padding: 0 4px; }
 
-[data-repeat] {
+.container {
   display: none; }
 
 .spinner {

@@ -77,7 +77,7 @@ InfiniteScroll.prototype.loadMore = function (fn) {
   checkLoading(that.loadingElement, this.fetching, this.noMore);
 
   var cb = function cb(result) {
-    that.noMore = result.noMore || false;
+    that.noMore = result.noMore;
     render(result.data, that);
     var lastElement = that.containerElement.lastChild;
     if (utils.inViewport(lastElement)) {
@@ -101,7 +101,7 @@ InfiniteScroll.prototype.loadMore = function (fn) {
     that.fetching = true;
 
     fn(function (result) {
-      that.noMore = result.noMore || false;
+      that.noMore = result.noMore;
       render(result.data, that);
     });
   }
@@ -115,7 +115,7 @@ InfiniteScroll.prototype.loadMore = function (fn) {
 function render(data, that) {
   that.fetching = false;
 
-  if (that.noMore) {
+  if (that.noMore && data.length === 0) {
     checkLoading(that.loadingElement, that.fetching, that.noMore);
     return;
   }
@@ -295,13 +295,9 @@ i.loadMore(function (cb) {
   }).then(function (data) {
     page++;
     setTimeout(function () {
-      if (data.length < perPage) {
-        cb({ data: data, noMore: true });
-      } else {
-        console.log(1);
-        cb({ data: data, noMore: false });
-      }
-    }, 1500);
+      var noMore = data.length < perPage ? true : false;
+      cb({ data: data, noMore: noMore });
+    }, 1000);
   });
 });
 
