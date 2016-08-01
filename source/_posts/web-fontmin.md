@@ -102,7 +102,7 @@ Github 地址：**[web-fontmin](https://github.com/forsigner/web-fontmin)**
 
 # 常用免费字体网站
 
-推荐几个常用的字体下载王章：
+推荐几个常用的字体下载网站：
 
 - [Google fonts](https://www.google.com/fonts/)
 - [Dafont](http://www.dafont.com/)
