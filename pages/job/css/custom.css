@@ -1,0 +1,21 @@
+/* custom styles can go here */
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-family: "Quicksand", sans-serif;
+  /*margin: 0 0 20px 0;*/
+  /*color: #333;*/
+  font-weight: normal;
+  /*line-height: 1.2;*/
+  /*letter-spacing: -0.08em;*/
+  /*text-transform: uppercase;*/
+  /*text-shadow: none;*/
+  /*word-wrap: break-word;*/
+  text-transform: none;
+}
+
+.reveal section img {
+    margin: 15px 0px;
+    background: rgba(255, 255, 255, 0.12);
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0  );
+}
