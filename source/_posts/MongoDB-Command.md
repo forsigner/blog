@@ -39,7 +39,7 @@ $ db.dropDatabase() # 删除数据库
 $ db.createCollection(name, options)
 $ db.createCollection("Hello", { capped : true, autoIndexID : true, size : 6142800, max : 10000 } )
 $ db.Hello.insert({"hello" : "world"}) 插入数据自动创建collection
-show collections # 查看当前数据库中的所有collection
+$ show collections # 查看当前数据库中的所有collection
 $ db.Hello.renameCollection("hi") # 重命名collection
 
 ```

@@ -7,7 +7,7 @@ title: forsigner的博客
 subtitle:
 description: forsigner, 前端开发, 用户体验, 设计, frontend, design, nodejs
 author: forsigner
-language: zh-Hans
+language: zh-CN
 timezone:
 
 # URL
@@ -39,7 +39,7 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: false
+  line_number: true
   auto_detect: true
   tab_replace:
 
