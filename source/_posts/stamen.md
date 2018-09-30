@@ -9,8 +9,6 @@ categories: 前端
 
 不评价但还是想吐槽:
 
-**如果**...
-
 什么 provider, connections, actions, reducers, effects, dispatch, put, call, payload, @observable, @computed, @observer, @inject...
 
 一堆模板代码、各种概念、什么大哲学... 还有各种多余牛毛的 Api。
@@ -26,11 +24,11 @@ categories: 前端
 - **高效** 更高的开发效率，这很重要
 - **Typescript** 高度支持 state 和 action 的智能提示
 
-我是个**实用主义者**，开发效率、代码可维护性和可读性、开发体验大于各种什么范式、各种理论，也不需要装纯，重要的是可以快速处理业务，产生价值，早点下班打王者。
+我是个**实用主义者**，**开发效率**、**代码可维护性和可读性**、**开发体验**大于各种什么范式、各种理论，也不需要装纯，重要的是可以快速处理业务，产生价值，早点下班打王者。
 
 有一天，我看到了 mobx 作者的 immer, 我感觉使用 immer, 可以实现一个我理想中的状态管理方工具，所以造了一个轮子，叫 [stamen](https://github.com/forsigner/stamen), 他有什么特点呢，我说过想要的就是。
 
-如果有什么核心特点的话，那应该是 "简洁"，这里指的是使用者写代码时简洁，可以专注于业务，而不是自身源代码简洁，把问题留给使用者。
+如果有什么**核心特点**的话，那应该是 "**简洁**"，这里指的是使用者写代码时简洁，可以专注于业务，而不是自身源代码简洁，把问题留给使用者。
 
 **用法比较点单:**
 
@@ -55,9 +53,7 @@ render(<App />, document.getElementById('root'));
 只有 state 和 action 没有其他概念， 只有一个 api:
 
 ```js
-const { consume, mutate } = createStore({
-  /** state object**/
-});
+const { consume, mutate } = createStore({ count: 1 });
 ```
 
 **更用法可以看：**
