@@ -1,11 +1,11 @@
 {
-  "app.js": "/stamen-zh-cn/static/js/app.2ebb224f.js",
-  "docs-about.js": "/stamen-zh-cn/static/js/docs-about.aacd6ca4.js",
-  "docs-api.js": "/stamen-zh-cn/static/js/docs-api.28f44d3b.js",
+  "app.js": "/stamen-zh-cn/static/js/app.22458c1f.js",
+  "docs-api.js": "/stamen-zh-cn/static/js/docs-api.5bcc6a3a.js",
+  "docs-about.js": "/stamen-zh-cn/static/js/docs-about.4b517457.js",
   "docs-faq.js": "/stamen-zh-cn/static/js/docs-faq.fa41fdc7.js",
   "docs-getting-started.js": "/stamen-zh-cn/static/js/docs-getting-started.da9dbda9.js",
   "docs-recommended.js": "/stamen-zh-cn/static/js/docs-recommended.c15eed00.js",
   "vendors.js": "/stamen-zh-cn/static/js/vendors.44397bee.js",
-  "runtime~app.js": "/stamen-zh-cn/static/js/runtime~app.e20cc9ce8d6c5540d05e.js",
+  "runtime~app.js": "/stamen-zh-cn/static/js/runtime~app.faaa7dea8942646d3b8f.js",
   "index.html": "/stamen-zh-cn/index.html"
 }

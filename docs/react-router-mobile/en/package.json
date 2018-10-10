@@ -1,0 +1,13 @@
+{
+  "name": "react-router-mobile",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "docz:dev": "docz dev",
+    "docz:build": "docz build"
+  },
+  "devDependencies": {
+    "docz": "^0.12.5"
+  }
+}

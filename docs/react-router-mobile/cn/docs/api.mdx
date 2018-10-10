@@ -1,0 +1,99 @@
+---
+name: API
+order: 70
+---
+
+
+# API
+
+> const { consume, mutate, getState } = createStore(initialState)
+
+使用 `createStore()` 创建一个 store 示例，使用 `consume` 访问 state，使用 `mutate` 更新 state。建议使用多 Store 来管理的项目。
+
+实际项目中 store 文件推荐这样组织:
+
+```js
+import { createStore } from 'stamen'
+
+const { consume, mutate } = createStore({ count: 1 })
+
+const actions = {
+  increment() {
+    mutate(state => state.count++)
+  },
+  decrement() {
+    mutate(state => state.count--)
+  },
+  asyncIncrement() {
+    setTimeout(() => {
+      mutate(state => {
+        state.count++
+      })
+    }, 1000)
+  },
+  async asyncDecrement() {
+    await new Promise((resolve, _) => {
+      setTimeout(() => {
+        resolve()
+      }, 1000)
+    })
+    mutate(state => state.count--)
+  },
+}
+
+export { consume, mutate, actions }
+```
+
+建议 `state` 和 `actions` 放在一个文件内, 尽量让每个 store 简单，如果以 store 太复杂的话，建议拆成多个 store。
+
+## `consume()`
+
+在组件内使用 state, state 改变后组件回自动 re-render。
+
+首先，你需要新建一个 store，例如:
+
+```js
+const { consume, mutate } = createStore({
+  count: 1,
+  info: {
+    name: 'Counter',
+  },
+})
+```
+
+**简单用法**
+
+```js
+<span>{consume(state => state.count)}</span>
+```
+
+**使用selector**
+
+使用selector能获得的更好的性能，能减少组件重复渲染，推荐多使用 selector.
+
+```js
+<span>{consume(state => state.info.name, name => name)}</span>
+```
+
+## `mutate()`
+
+Action 是一个内部调用了 `mutate()` 的普通函数, 你可以在任意地方调用 action: stateless 组件内、React 生命周期函数内、甚至在组件外，所以你并不需要类似 connect 或者 inject 这样的 HOC。
+
+State 是 immutable 的, 但你能使用 mutable 方式 `mutate` 来生成新的，在处理复杂 store 时非常重要，这是[immer](https://github.com/mweststrate/immer) 的强大之处，多亏 immer。
+
+```js
+function increment() {
+  mutate(state => {
+    state.count++
+  })
+}
+```
+
+## `getState()`
+
+获取当前的 state
+
+```js
+const { getState } = createStore({ count: 1 })
+const currentState = getState()
+```

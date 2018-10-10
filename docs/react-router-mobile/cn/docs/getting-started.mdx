@@ -1,0 +1,55 @@
+---
+name: 快速开始
+order: 90
+---
+
+# 快速开始 
+
+## 安装
+
+```bash
+yarn add stamen
+npm i stamen
+```
+
+## 基本用法
+
+```js
+import React from 'react'
+import { render } from 'react-dom'
+import { createStore } from 'stamen'
+
+const { consume, mutate } = createStore({ count: 1 })
+
+const App = () => (
+  <div>
+    <span>{consume(state => state.count)}</span>
+    <button onClick={() => mutate(state => state.count--)}>-</button>
+    <button onClick={() => mutate(state => state.count++)}>+</button>
+  </div>
+)
+
+render(<App />, document.getElementById('root'))
+```
+
+Check on CodeSandbox: [Basic](https://codesandbox.io/s/0vrrlkjx5w) | [Async](https://codesandbox.io/s/kmq65p3l97)
+
+
+### 例子
+
+- [Basic](https://github.com/forsigner/stamen/tree/master/examples/basic) - 最简单用法例子
+- [Async](https://github.com/forsigner/stamen/tree/master/examples/async) - 异步发请求获取远程数据
+- [TodoMVC](https://github.com/forsigner/stamen/tree/master/examples/todomvc)  - stamen 实现 TodoMVC
+- [Recommended usage](https://github.com/forsigner/stamen/tree/master/examples/recommended-usage) - 项目中 stamen 的推荐用法
+
+
+本地运行例子
+
+```bash
+git clone https://github.com/forsigner/stamen
+cd stamen/examples/basic
+# cd stamen/examples/async
+# cd stamen/examples/todomvc
+yarn 
+yarn start
+```

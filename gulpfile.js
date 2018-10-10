@@ -1,12 +1,15 @@
 const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
-const pngquant = require('imagemin-pngquant'); // $ npm i -D imagemin-pngquant
 
-gulp.task('default', () => {
-  return gulp.src('./source/images-src/**/*')
-    .pipe(imagemin({
-      progressive: true,
-      use: [pngquant()]
-    }))
-    .pipe(gulp.dest('./source/images'));
-});
+gulp.task('default', () =>
+  gulp
+    .src('source/images-src/**/*.{gif,png,jpg,}')
+    .pipe(
+      imagemin([
+        imagemin.gifsicle({ interlaced: true }),
+        imagemin.jpegtran({ progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+      ]),
+    )
+    .pipe(gulp.dest('source/images')),
+);

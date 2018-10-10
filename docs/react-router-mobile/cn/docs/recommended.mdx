@@ -1,0 +1,91 @@
+---
+name: 推荐用法
+order: 80
+---
+
+### 推荐的文件组织方式
+
+```sh
+.
+├── components
+│   ├── App.tsx
+│   ├── Counter.tsx
+│   ├── Posts.tsx
+│   └── Profile.tsx
+├── index.tsx
+└── stores # multiple store and keep per store small
+    ├── counterStore.ts
+    ├── postStore.ts
+    └── profileStore.ts
+```
+
+### 推荐的 store 组织方式
+
+```js
+import { createStore } from 'stamen'
+
+const { consume, mutate } = createStore({ count: 1 })
+
+const actions = {
+  increment() {
+    mutate(state => state.count++)
+  },
+  decrement() {
+    mutate(state => state.count--)
+  },
+  asyncIncrement() {
+    setTimeout(() => {
+      mutate(state => {
+        state.count++
+      })
+    }, 1000)
+  },
+  async asyncDecrement() {
+    await new Promise((resolve, _) => {
+      setTimeout(() => {
+        resolve()
+      }, 1000)
+    })
+    mutate(state => state.count--)
+  },
+}
+
+export { consume, mutate, actions }
+```
+
+### 在组件中使用 store
+
+```js
+import * as React from 'react'
+import { consume, actions } from '@stores/counterStore'
+
+const Counter = () => (
+  <div>
+    <div>{consume(state => state.count)}</div>
+    <button onClick={actions.decrement}>-</button>
+    <button onClick={actions.increment}>+</button>
+  </div>
+)
+
+export default Counter
+```
+
+**小技巧:**
+
+tsconfig.json, or `alias` in webpack, so you can import store like this in any where:
+
+
+```js
+import { consume, actions } from '@stores/counterStore'
+```
+
+```json
+{
+  "compilerOptions": {
+    "paths": {
+      "@stores/*": ["src/stores/*"],
+    }
+  }
+}
+```
+
