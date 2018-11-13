@@ -5,14 +5,14 @@ tags: [JavaScript, TypeScript, React]
 categories: 前端
 ---
 
-接上一篇： [我理想中的状态管理工具](http://forsigner.com/2018/11/12/my-dream-state-management/)
+接上一篇：[我理想中的状态管理工具](http://forsigner.com/2018/11/12/my-dream-state-management/)
 
 之前说，对于我个人来而言，理想的状态管理工具只需同时满足两个特点：
 
 - **简单易用，并且适合中大型项目**
 - **完美的支持 Typescript**
 
-未能找到一个完美  满足这两点的，所以我决定自己造了一个：叫 [Stamen](https://github.com/forsigner/stamen)
+未能找到一个完美满足这两点的，所以我决定自己造了一个：叫 [Stamen](https://github.com/forsigner/stamen)
 
 首先是 **简单易用，并且适合中大型项目**，Stamen 的 Api 设计借鉴了 dva、mirror、rematch，但却更简单，主要借鉴了它们的 model 的组织方式：state、reducers、effects。把 action 分为 reducer 和 effect 两类是很好的实践。
 
@@ -65,11 +65,11 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 线上 demo 可以看 (Check on CodeSandbox): [Basic](https://codesandbox.io/s/0vrrlkjx5w) | [Async](https://codesandbox.io/s/kmq65p3l97)
 
-这段代码涵盖了 Stamen 的全部 Api，核心  的理念  包括：
+这段代码涵盖了 Stamen 的全部 Api，核心的理念包括：
 
 - 尽量简洁的 Api，没有 connect、Provider
 - 使用 React Hooks，抛弃 hoc 和 render props
--  推荐使用多 store，store 是分形的，更加灵活
+- 推荐使用多 store，store 是分形的，更加灵活
 
 为什么不需要 Provider ？
 
@@ -77,9 +77,9 @@ Stamen 默认是多 store，这更灵活简单 ，所以并不需要使用 Provi
 
 为什么使用 Reack Hooks?
 
-用 React Hooks 写出代码可读性更强，可维护性更高，对 Typescript 支持更好，hoc 最大问题是对 Typescript 支持不好，使用 render props 最大问题写出的代码有点反人类， 当然  hoc 和 render props 和 React Hooks 对比还有其他缺点，具体可以 Hooks 文档。
+用 React Hooks 写出代码可读性更强，可维护性更高，对 Typescript 支持更好，hoc 最大问题是对 Typescript 支持不好，使用 render props 最大问题写出的代码有点反人类，当然 hoc 和 render props 和 React Hooks 对比还有其他缺点，具体可以 Hooks 文档。
 
-之前  有一段  代码，用 render props 会产生太多嵌套：
+之前有一段代码，用 render props 会产生太多嵌套：
 
 ```js
 const Counter = create({ count: 0 });
@@ -109,7 +109,7 @@ const App = () => (
 );
 ```
 
-如果使用 React Hooks 改写，可读性会大大提高， 下面用 Stamen 改写：
+如果使用 React Hooks 改写，可读性会大大提高，下面用 Stamen 改写：
 
 ```js
 const counterStore = CounterStore.useStore();
@@ -139,20 +139,25 @@ const App = () => (
 
 下面用几张 gif 来展示 Stamen 对 Typescript 完美支持。
 
-**图一**：用鼠标悬停到变量 state 和 action，可以查看它们完整的类型定义。不同于使用 connect 等 hoc，你不要写任何类型定义，一切到时自动地类型推倒。
+**图一**: 用鼠标悬停到变量 state 和 action，可以查看它们完整的类型定义。不同于使用 connect 等 hoc，你不要写任何类型定义，一切都是自动地类型推倒。
+
 
 ![hover](http://forsigner.com/images/stamen/hover.gif)
 
-**图二**：state 的自动补全。
+
+**图二**: state 的自动补全。
+
 
 ![state](http://forsigner.com/images/stamen/state.gif)
 
-**图三**：actions 的自动补全，```dispatch()``` 支持两种类型参数，一种是字符串(action 的函数名)，另外一种 actionSelector 函数(类似 redux 的 stateSlector)，推荐使用后面一种，开发体验会更好。
+
+**图三**: actions 的自动补全，dispatch 支持两种类型参数，一种是字符串(action 的函数名)，另外一种 actionSelector 函数(类似 redux 的 stateSlector)，推荐使用后面一种，开发体验会更好。
+
 
 ![action](http://forsigner.com/images/stamen/action.gif)
 
 
-**图四**：使用 actionSelector，方便的跳转到 action 函数定义处，方便安全进行重构重命名等操作。
+**图四**: 使用 actionSelector，方便的跳转到 action 函数定义处，方便安全进行重构重命名等操作。
 
 ![action](http://forsigner.com/images/stamen/action.gif)
 
