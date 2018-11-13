@@ -6,10 +6,10 @@ categories: 前端
 ---
 
 
-现已存在许多成熟的状态管理解决方案：Redux、Mobx、Mobx-state-tree，还有基于 Redux 的 Dva.js、Rematch... 但对于我个人来说，理想的状态管理工具值需同时满足两个特点：
+现已存在许多成熟的状态管理解决方案：Redux、Mobx、Mobx-state-tree，还有基于 Redux 的 Dva.js、Rematch... 但对于我个人来说，理想的状态管理工具只需同时满足两个特点：
 
-- 简单易用，并且适合中大型项目
-- 完美的支持 Typescript
+- **简单易用，并且适合中大型项目**
+- **完美的支持 Typescript**
 
 要做到这两点其实并不简单。
 
@@ -83,9 +83,9 @@ const App = () => (
 );
 ```
 
-这种自由度  虽然灵活度高，但是降低了代码的可维护性。
+这种自由度虽然灵活度高，但是降低了代码的可维护性。
 
-另外，用 Render props 获取 state 看似比 Redux 的 Connect 简单，但其实并不优雅，比如一个很常见的获取  多个 state，使用 Render props 可能要这样：
+另外，用 render props 获取 state 看似比 Redux 的 Connect 简单，但其实并不优雅，比如一个很常见的获取多个 state，使用 render props 可能要这样：
 
 ```js
 const Counter = create({ count: 0 });
@@ -115,7 +115,7 @@ const App = () => (
 );
 ```
 
-多个 Render props 的嵌套会导致 callback hell 类似结果，直接让你的代码反人类。
+多个 render props 的嵌套会导致 callback hell 类似结果，直接让你的代码反人类。
 
 上面说完了 “**简单易用**”，下面聊聊 “**适合中大型项目**”。当然，我心目中的 “**适合中大型项目**” 的前提是 “**简单易用**”，否者我并不会选择它。
 
@@ -239,6 +239,6 @@ export default connect(mapState, mapDispatch)(Count)
 
 对我个人而言 Rematch 也无法满足这两个特点。
 
-所以, 我只能自己造一个:
+所以, 我决定自己造一个:
 
-> stamen: **可能是基于 Hooks 和 Typescript 最好的状态管理工具**
+> [stamen: **可能是基于 Hooks 和 Typescript 最好的状态管理工具**](https://github.com/forsigner/stamen)
