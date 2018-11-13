@@ -1,7 +1,7 @@
 ---
 title: 简洁的 React 状态管理库 - Stamen
 date: 2018-10-1
-tags: [JavaScript, TypeScript]
+tags: [JavaScript, TypeScript, React]
 categories: 前端
 ---
 

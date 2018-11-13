@@ -17,20 +17,49 @@ npm i stamen
 
 ```js
 import React from 'react'
-import { render } from 'react-dom'
+import ReactDOM from 'react-dom'
 import { createStore } from 'stamen'
 
-const { consume, mutate } = createStore({ count: 1 })
+const CounterStore = createStore({
+  state: {
+    count: 10,
+  },
+  reducers: {
+    increment(state) {
+      state.count++
+    },
+    decrement(state) {
+      state.count--
+    },
+  },
+  effects: {
+    async asyncIncrement(dispatch) {
+      await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve()
+        }, 1000)
+      })
+      dispatch('increment')
+    },
+  },
+})
 
-const App = () => (
-  <div>
-    <span>{consume(state => state.count)}</span>
-    <button onClick={() => mutate(state => state.count--)}>-</button>
-    <button onClick={() => mutate(state => state.count++)}>+</button>
-  </div>
-)
+const App = () => {
+  const { get, dispatch } = CounterStore.useStore()
+  const count = get(s => s.count)
+  return (
+    <div>
+      <span>{count}</span>
+      <button onClick={() => dispatch('decrement')}>-</button>
+      <button onClick={() => dispatch('increment')}>+</button>
+      <button onClick={() => dispatch('asyncIncrement')}>async+</button>
+    </div>
+  )
+}
 
-render(<App />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))
+
+
 ```
 
 Check on CodeSandbox: [Basic](https://codesandbox.io/s/0vrrlkjx5w) | [Async](https://codesandbox.io/s/kmq65p3l97)
