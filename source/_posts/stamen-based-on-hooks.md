@@ -139,21 +139,23 @@ const App = () => (
 
 下面用几张 gif 来展示 Stamen 对 Typescript 完美支持。
 
-图一：
+**图一**：用鼠标悬停到变量 state 和 action，可以查看它们完整的类型定义。不同于使用 connect 等 hoc，你不要写任何类型定义，一切到时自动地类型推倒。
 
 ![hover](http://forsigner.com/images/stamen/hover.gif)
 
-图二：
+**图二**：state 的自动补全。
 
-![hover](http://forsigner.com/images/stamen/state.gif)
+![state](http://forsigner.com/images/stamen/state.gif)
 
-图三：
+**图三**：actions 的自动补全，```dispatch()``` 支持两种类型参数，一种是字符串(action 的函数名)，另外一种 actionSelector 函数(类似 redux 的 stateSlector)，推荐使用后面一种，开发体验会更好。
 
-![hover](http://forsigner.com/images/stamen/aciton.gif)
+![action](http://forsigner.com/images/stamen/action.gif)
 
 
-图四：
-![hover](http://forsigner.com/images/stamen/go.gif)
+**图四**：使用 actionSelector，方便的跳转到 action 函数定义处，方便安全进行重构重命名等操作。
+
+![action](http://forsigner.com/images/stamen/action.gif)
+
 
 Stamen 的 Api 非常简单，可以直接看类型定义：
 
