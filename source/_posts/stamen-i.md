@@ -9,7 +9,7 @@ categories: 前端
 现已存在许多成熟的状态管理解决方案：Redux、Mobx、Mobx-state-tree，还有基于 Redux 的 Dva.js、Rematch... 但对于我个人来说，理想的状态管理工具只需同时满足两个特点：
 
 - **简单易用，并且适合中大型项目**
-- **完美的支持 Typescript**
+- **完美地支持 Typescript**
 
 要做到这两点其实并不简单。
 
@@ -174,7 +174,7 @@ render(<App />, document.getElementById('root'))
 
 可以看出它们核心是把 Redux 分散的 actions 和 reducers 合并在一个地方，并减少了样板代码，而且自带异步 action 解决方案，抽象为 effects。
 
-说完第一个特点，接下来是第二个特点：**“完美的支持 Typescript”**。
+说完第一个特点，接下来是第二个特点：**“完美地支持 Typescript”**。
 
 为什么我这么这么执着于 Typescript，使用过 Typescript 的都应该知道，不过什么规模的项目，开发体验比使用 Javascript 好太多，没入坑的同学可以去试试。
 
@@ -241,4 +241,4 @@ export default connect(mapState, mapDispatch)(Count)
 
 所以, 我决定自己造一个:
 
-> [stamen: **可能是基于 Hooks 和 Typescript 最好的状态管理工具**](https://github.com/forsigner/stamen)
+> [stamen: **可能是基于 Hooks 和 Typescript 最好的状态管理工具**](http://forsigner.com/2018/11/13/stamen-ii/)

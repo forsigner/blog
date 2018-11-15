@@ -5,14 +5,14 @@ tags: [JavaScript, TypeScript, React]
 categories: 前端
 ---
 
-接上一篇：[我理想中的状态管理工具](http://forsigner.com/2018/11/12/my-dream-state-management/)
+接上一篇：[我理想中的状态管理工具](http://forsigner.com/2018/11/12/stamen-i/)
 
 之前说，对于我个人来而言，理想的状态管理工具只需同时满足两个特点：
 
 - **简单易用，并且适合中大型项目**
-- **完美的支持 Typescript**
+- **完美地支持 Typescript**
 
-未能找到一个完美满足这两点的，所以我决定自己造了一个：叫 [Stamen](https://github.com/forsigner/stamen)
+未能找到一个完美满足这两点的，所以我决定自己造了一个：叫 [Stamen](https://github.com/forsigner/stamen)。
 
 首先是 **简单易用，并且适合中大型项目**，Stamen 的 Api 设计借鉴了 dva、mirror、rematch，但却更简单，主要借鉴了它们的 model 的组织方式：state、reducers、effects。把 action 分为 reducer 和 effect 两类是很好的实践。
 
@@ -135,9 +135,9 @@ const App = () => (
 );
 ```
 
-接下来是 **完美的支持 Typescript**，前面是过 hoc 对 Typescript 支持，render props 书写可读性差，React Hooks 能很好的平衡这两点。
+接下来是 **完美地支持 Typescript**，前面是过 hoc 对 Typescript 支持，render props 书写可读性差，React Hooks 能很好的平衡这两点。
 
-下面用几张 gif 来展示 Stamen 对 Typescript 完美支持。
+下面用几张 gif 来展示 Stamen 对 Typescript 完美地支持。
 
 **图一**: 用鼠标悬停到变量 state 和 action，可以查看它们完整的类型定义。不同于使用 connect 等 hoc，你不要写任何类型定义，一切都是自动地类型推倒。
 
@@ -157,9 +157,9 @@ const App = () => (
 ![action](http://forsigner.com/images/stamen/action.gif)
 
 
-**图四**: 使用 actionSelector，方便的跳转到 action 函数定义处，方便安全进行重构重命名等操作。
+**图四**: 使用 actionSelector，方便地跳转到 action 函数定义处，方便安全地进行重构重命名等操作。
 
-![action](http://forsigner.com/images/stamen/action.gif)
+![action](http://forsigner.com/images/stamen/go.gif)
 
 
 Stamen 的 Api 非常简单，可以直接看类型定义：
