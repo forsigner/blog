@@ -1,4 +1,4 @@
-import { css } from 'docz-plugin-css';
+import { css } from 'docz-plugin-css'
 
 export default {
   title: 'Dahlia',
@@ -12,8 +12,8 @@ export default {
     head: {
       links: [
         // {
-          // rel: 'stylesheet',
-          // href: 'https://codemirror.net/theme/material.css',
+        // rel: 'stylesheet',
+        // href: 'https://codemirror.net/theme/material.css',
         //   href:
         //     'https://cdn.jsdelivr.net/npm/codemirror-one-light-theme@1.0.0/one-light.css',
         // },
@@ -225,10 +225,11 @@ export default {
   font-style: italic;
 }
 .cm-s-one-light .cm-tag {
-  color: #e45649;
+  color: #22863a;
+  
 }
 .cm-s-one-light .cm-attribute {
-  color: #d49e2a;
+  color: #6f42c1;
 }
 .cm-s-one-light .cm-link {
   color: #50a14f;
@@ -259,7 +260,8 @@ export default {
 .cm-s-one-light .cm-variable-2 {
   color: #444;
 }
-.cm-s-one-light .cm-string {
+.cm-s-one-light .cm-string,
+.cm-s-one-light .cm-string-2 {
   color: #50a14f;
 }
 .cm-s-one-light .cm-punctuation {
@@ -308,21 +310,21 @@ export default {
 
         </style>
         `,
-      },
     },
+  },
+  lineNumbers: false,
+  themeConfig: {
+    //mode: 'dark',
+    // codemirrorTheme: 'material',
+    codemirrorTheme: 'one-light',
     lineNumbers: false,
-    themeConfig: {
-      //mode: 'dark',
-      // codemirrorTheme: 'material',
-      codemirrorTheme: 'one-light',
-      lineNumbers: false,
-      colors: {
-        primary: '#ea567c',
-        sidebarBg: 'white',
-      },
-      styles: {
-        body: {
-          fontFamily:
+    colors: {
+      primary: '#ea567c',
+      sidebarBg: 'white',
+    },
+    styles: {
+      body: {
+        fontFamily:
           'Hack, Monaco, Source Code Pro, Menlo, Courier New, monospace',
         fontSize: '16px !important',
       },
@@ -351,4 +353,4 @@ export default {
     },
   },
   plugins: [css()],
-};
+}

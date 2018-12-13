@@ -1,6 +1,6 @@
 ---
 name: API
-order: 950
+order: 940
 ---
 
 # API
@@ -10,7 +10,7 @@ order: 950
 用来初始化 Dahlia，推荐在入口文件初始化，这里为什么不使用 Provider 的方式来初始化，因为 初始化的配置  跟子组件并没有关系，所以没必要，使用 "**Programmatically**" 的方式初始化会更清晰。
 
 ```js
-import dahlia from 'dahlia';
+import dahlia from 'dahlia'
 
 dahlia.init({
   graphql: {
@@ -19,14 +19,14 @@ dahlia.init({
   rest: {
     endpoint: 'https://jsonplaceholder.typicode.com',
   },
-});
+})
 ```
 
 ## useQuery
 
 **`const { loading, data, error, refetch } = useQuery(query, variables, options)`**
 
-获取  服务端数据是一个非常通用的业务场景，这个一个重复而繁杂的工作，`useQuery` 把这个业务逻辑通用化了，通过 `useQuery`，你可以  用最简单的方式获取数据，并且可以方便的处理加载状态和  错误信息。
+获取服务端数据是一个非常通用的业务场景，这个一个重复而繁杂的工作，`useQuery` 把这个业务逻辑通用化了，通过 `useQuery`，你可以用最简单的方式获取数据，并且可以方便的处理加载状态和错误信息。
 
 ### Params
 
@@ -48,7 +48,7 @@ GraphQL 查询的变量，是一个普通的 JavaScript 对象，例如：
 
 ```js
 {
-  id: 1000;
+  id: 1000
 }
 ```
 
@@ -59,7 +59,7 @@ GraphQL 查询的变量，是一个普通的 JavaScript 对象，例如：
 ```js
 {
   headers: {
-    token: '57bb44dd21d2befb7ca3f010';
+    token: '57bb44dd21d2befb7ca3f010'
   }
 }
 ```
@@ -68,7 +68,7 @@ GraphQL 查询的变量，是一个普通的 JavaScript 对象，例如：
 
 **`loading: boolean`**
 
-请求  状态，是否成功获取数据，对前端界面状态处理很有用。
+请求状态，是否成功获取数据，对前端界面状态处理很有用。
 
 **`data: TData`**
 
@@ -77,14 +77,14 @@ GraphQL 查询成功返回的数据对象，例如：
 ```js
 {
   hero: {
-    name: 'Cristiano Ronaldo';
+    name: 'Cristiano Ronaldo'
   }
 }
 ```
 
-**`error: DahliaError`**
+**`error: TError`**
 
-请求发生错误时，返回的  错误信息对象，例如：
+请求发生错误时，返回的错误信息对象，例如：
 
 ```js
 {
@@ -98,7 +98,7 @@ GraphQL 查询成功返回的数据对象，例如：
 
 **`refetch: (variables?: TVariables) => void`**
 
-一个函数，可以让你重新发请求获取数据，比如你有一刷新按钮， 点击重新获取数据，你就可以用 refetch 了。
+一个函数，可以让你重新发请求获取数据，比如你有一刷新按钮，点击重新获取数据，你就可以用 refetch 了。
 
 ## useMutate
 
@@ -139,14 +139,14 @@ GraphQL mutate 成功返回的数据对象，例如：
 ```js
 {
   hero: {
-    name: 'Cristiano Ronaldo';
+    name: 'Cristiano Ronaldo'
   }
 }
 ```
 
-**`error: DahliaError`**
+**`error: TError`**
 
-请求发生错误时，返回的  错误信息对象，例如：
+请求发生错误时，返回的错误信息对象，例如：
 
 ```js
 {
@@ -162,7 +162,7 @@ GraphQL mutate 成功返回的数据对象，例如：
 
 **`const { loading, data, error, refetch } = useFetch(url, options)`**
 
-获取  服务端数据是一个非常通用的业务场景，这个一个重复而繁杂的工作，`useQuery` 把这个业务逻辑通用化了，通过 `useQuery`，你可以  用最简单的方式获取数据，并且可以方便的处理加载状态和错误信息。
+获取服务端数据是一个非常通用的业务场景，这个一个重复而繁杂的工作，`useQuery` 把这个业务逻辑通用化了，通过 `useQuery`，你可以用最简单的方式获取数据，并且可以方便的处理加载状态和错误信息。
 
 ### Params
 
@@ -180,7 +180,7 @@ GraphQL mutate 成功返回的数据对象，例如：
 
 **`loading: boolean`**
 
-请求  状态，是否成功获取数据，对前端界面状态处理很有用。
+请求状态，是否成功获取数据，对前端界面状态处理很有用。
 
 **`data: TData`**
 
@@ -189,14 +189,14 @@ GraphQL 查询成功返回的数据对象，例如：
 ```js
 {
   hero: {
-    name: 'Cristiano Ronaldo';
+    name: 'Cristiano Ronaldo'
   }
 }
 ```
 
-**`error: DahliaError`**
+**`error: TError`**
 
-请求发生错误时，返回的  错误信息对象，例如：
+请求发生错误时，返回的错误信息对象，例如：
 
 ```js
 {
@@ -210,7 +210,7 @@ GraphQL 查询成功返回的数据对象，例如：
 
 **`refetch: (variables?: TVariables) => void`**
 
-一个函数，可以让你重新发请求获取数据，比如你有一刷新按钮， 点击重新获取数据，你就可以用 refetch 了。
+一个函数，可以让你重新发请求获取数据，比如你有一刷新按钮，点击重新获取数据，你就可以用 refetch 了。
 
 ## useUpdate
 
@@ -240,7 +240,7 @@ GraphQL 查询成功返回的数据对象，例如：
 
 **`loading: boolean`**
 
-请求  状态，是否成功获取数据，对前端界面状态处理很有用。
+请求状态，是否成功获取数据，对前端界面状态处理很有用。
 
 **`data: TData`**
 
@@ -249,14 +249,14 @@ GraphQL 查询成功返回的数据对象，例如：
 ```js
 {
   hero: {
-    name: 'Cristiano Ronaldo';
+    name: 'Cristiano Ronaldo'
   }
 }
 ```
 
-**`error: DahliaError`**
+**`error: TError`**
 
-请求发生错误时，返回的  错误信息对象，例如：
+请求发生错误时，返回的错误信息对象，例如：
 
 ```js
 {
@@ -275,7 +275,7 @@ const { useStore, dispatch, query, fetch } = createStore({
   state: {},
   reducers: {},
   affects: {},
-});
+})
 ```
 
 **`state:any`**
@@ -284,12 +284,12 @@ const { useStore, dispatch, query, fetch } = createStore({
 
 ```ts
 interface State {
-  count: number;
-  step?: number;
+  count: number
+  step?: number
 }
 
-const initialState: State = { count: 0 } as State;
-const someStore = createStore({ state: initialState });
+const initialState: State = { count: 0 } as State
+const someStore = createStore({ state: initialState })
 ```
 
 **`reducers: { [string]: (state, payload) => any }`**
@@ -300,15 +300,15 @@ Dahalia 中有两种类型的 action：reducer 和 effect，你只能通过 redu
 const someStore = createStore({
   reducers: {
     increment(state, step) {
-      state.count += step;
+      state.count += step
     },
   },
-});
+})
 ```
 
 **`effects: { [string]: (payload) => any }`**
 
-如果是要在 action 中进行副作用操作，请使用 effects，比如异步网络请求、定时器等。需要改变state，你需要 dispatch 一个 action 。
+如果是要在 action 中进行副作用操作，请使用 effects，比如异步网络请求、定时器等。需要改变 state，你需要 dispatch 一个 action 。
 
 ```js
 const { dispatch } = createStore({
@@ -316,13 +316,13 @@ const { dispatch } = createStore({
     async asyncIncrement() {
       await new Promise((resolve, reject) => {
         setTimeout(() => {
-          resolve();
-        }, 1000);
-      });
-      dispatch(A => A.increment);
+          resolve()
+        }, 1000)
+      })
+      dispatch(A => A.increment)
     },
   },
-});
+})
 ```
 
 ## store.useStore
@@ -331,10 +331,10 @@ const { dispatch } = createStore({
 
 ```js
 const App = () => {
-  const { useStore } = counterStore;
-  const count = useStore(S => S.count);
-  return <span>{count}</span>;
-};
+  const { useStore } = counterStore
+  const count = useStore(S => S.count)
+  return <span>{count}</span>
+}
 ```
 
 ## store.dispatch
@@ -343,9 +343,9 @@ Dispatch 一个 action 用来更新 state，`dispatch` 接受一个 action selec
 
 ```js
 const App = () => {
-  const { dispatch } = counterStore;
-  return <button onClick={() => dispatch(A => A.decrement)}>-</button>;
-};
+  const { dispatch } = counterStore
+  return <button onClick={() => dispatch(A => A.decrement)}>-</button>
+}
 ```
 
 ## store.query

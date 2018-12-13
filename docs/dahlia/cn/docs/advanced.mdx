@@ -11,15 +11,71 @@ order: 960
 
 ## 状态管理
 
-## query 和 状态管理
+随着应用的复杂度上升，你需要一个状态管理工具统一组织和管理应用的各种状态，Dahlia 内置了状态管理工具，不需要再 Redux 或者 MobX 等状态管理工具。为什么不直接使用 Redux 或者 MobX 呢？最大的原因是它们对 TypeScript 的支持不够完美，其次是他们不支持 React Hooks。
 
-## fetch 和 状态管理
+让我们来看看怎么使用 Dahlia 进行状态管理，下面这段代码几乎涵盖了 Dahlia 状态管理的所有用法：
+
+- `createStore` —— 如何定义一个 store？
+- `reducers` —— 如何使用同步 action？
+- `effects` —— 如何使用异步 action？
+- `useStore` —— 如何读取 store 里的 state？
+- `dispatch` —— 如何触发一个 action？
+
+```js
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { createStore } from 'stamen'
+
+const counterStore = createStore({
+  state: {
+    count: 10,
+  },
+  reducers: {
+    increment(state) {
+      state.count++
+    },
+    decrement(state) {
+      state.count--
+    },
+  },
+  effects: {
+    async asyncIncrement() {
+      await new Promise(resolve => {
+        setTimeout(() => {
+          resolve()
+        }, 1000)
+      })
+      counterStore.dispatch(A => A.increment)
+    },
+  },
+})
+
+const App = () => {
+  const count = counterStore.useStore(S => S.count)
+  return (
+    <div>
+      <span>{count}</span>
+      <button onClick={() => dispatch(A => A.decrement)}>-</button>
+      <button onClick={() => dispatch(A => A.increment)}>+</button>
+      <button onClick={() => dispatch(A => A.asyncIncrement)}>async+</button>
+    </div>
+  )
+}
+
+ReactDOM.render(<App />, document.getElementById('root'))
+```
+
+## query 和  状态管理
+
+## fetch 和  状态管理
 
 ## dispatch
 
-## 副作用(Effects)
+##  副作用(Effects)
 
-## 选择器
+##  选择器
+
+## Mock 数据
 
 ## 缓存
 
