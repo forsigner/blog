@@ -7,7 +7,7 @@ order: 950
 
 ## init
 
-用来初始化 Dahlia，推荐在入口文件初始化，这里为什么不使用 Provider 的方式来初始化，因为 初始化的配置  跟子组件并没有关系，所以没必要，使用 "**Programmatically**" 的方式初始化会更清晰。
+用来初始化 Dahlia，推荐在入口文件初始化，这里为什么不使用 Provider 的方式来初始化，因为初始化的配置跟子组件并没有关系，所以没必要，使用 "**Programmatically**" 的方式初始化会更清晰。
 
 ```js
 import dahlia from 'dahlia'
@@ -327,7 +327,7 @@ const { dispatch } = createStore({
 
 ## store.useStore
 
-使用 React hooks 的方式获取 state，为了  获得更好的性能，尽量减少 re-render，需要使用 state selector，例如：`S => S.count`、`S => S`。使用 React hooks，你不要写任何 TypeScript type 就可以得到完整的智能提示。
+使用 React hooks 的方式获取 state，为了获得更好的性能，尽量减少 re-render，需要使用 state selector，例如：`S => S.count`、`S => S`。使用 React hooks，你不要写任何 TypeScript type 就可以得到完整的智能提示。
 
 ```js
 const App = () => {
@@ -339,7 +339,7 @@ const App = () => {
 
 ## store.dispatch
 
-Dispatch 一个 action 用来更新 state，`dispatch` 接受一个 action selector(类似 state selector)，而不是 Redux 使用的字符串标量，这样的好处是： 智能提示、精确的跳转到定义，可以有更好的开发体验和  代码可维护性。
+Dispatch 一个 action 用来更新 state，`dispatch` 接受一个 action selector(类似 state selector)，而不是 Redux 使用的字符串标量，这样的好处是：智能提示、精确的跳转到定义，可以有更好的开发体验和代码可维护性。
 
 ```js
 const App = () => {

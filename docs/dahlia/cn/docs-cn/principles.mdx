@@ -1,5 +1,5 @@
 ---
-name: Dahlia 的哲学
+name: Dahlia 的哲学
 order: 950
 ---
 

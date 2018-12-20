@@ -328,6 +328,10 @@ export default {
           'Hack, Monaco, Source Code Pro, Menlo, Courier New, monospace',
         fontSize: '16px !important',
       },
+      container: {
+        width: ['100%', '100%', 'auto'],
+        padding: ['20px', '0 40px 40px'],
+      },
       h1: {
         fontSize: 36,
       },
