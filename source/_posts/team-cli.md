@@ -1,7 +1,7 @@
 ---
 title: 打造前端团队 React CLI 工具
 date: 2019-05-04
-tags: [前端, JavaScript, TypeScript, CLI]
+tags: [React, JavaScript, TypeScript, CLI]
 categories: 前端
 ---
 
