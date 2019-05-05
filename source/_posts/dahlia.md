@@ -33,7 +33,7 @@ Dahlia 是一个大而全的框架，包括了很多东西：
 
 因为老了，所以 Dahlia 这个框架暂时也只支持 TypeScript，因为如果没有 TypeScript, `dangerouslySetInnerHTML`这样的 Api 也会令我抓狂，因为 `dangerouslySetInnerHTML` 这个单词我可能要背好几周才能写出来。
 
-React 以灵活著称，为什么要搞一个框架？因为懒得折腾，如果我记忆力足够好，我应该会选择 Angular，可惜不够好，所以搞了一个大而全 Dahlia，希望能少折腾、多做事、早下班。
+React 以灵活著称，为什么还要搞一个框架呢？因为懒得折腾，如果我记忆力足够好，我应该会选择 Angular，可惜不够好，所以搞了一个大而全 Dahlia，希望能少折腾、多做事、早下班。
 
 ## Dahlia 有什么特点
 
